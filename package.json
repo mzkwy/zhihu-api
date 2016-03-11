@@ -1,0 +1,29 @@
+{
+  "name": "zhihu-api",
+  "version": "0.0.1",
+  "description": "Unofficial API for zhihu (https://www.zhihu.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syaning/zhihu-api.git"
+  },
+  "keywords": [
+    "zhihu",
+    "api",
+    "crawler",
+    "spider"
+  ],
+  "author": "Alex Sun <syaningv@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/syaning/zhihu-api/issues"
+  },
+  "homepage": "https://github.com/syaning/zhihu-api#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.69.0"
+  }
+}
