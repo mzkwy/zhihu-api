@@ -65,4 +65,10 @@ describe('api.user', function() {
         expect(followees).to.be.a('promise')
         return expect(followees).to.eventually.be.an('array')
     })
+
+    it('#user.answers(page)', function() {
+        var answers = user(uname).answers(1)
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
 })

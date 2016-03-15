@@ -27,31 +27,26 @@ describe('urls', function() {
             .equal(baseurl + '/node/ProfileFolloweesListV2')
     })
 
-    it('urls.user.answers(uname)', function() {
-        expect(urls.user.answers('test')).to
-            .equal(baseurl + '/people/test/answers')
-    })
-
-    it('urls.answer.byVote()', function() {
-        expect(urls.answer.byVote()).to
-            .equal(baseurl + '/node/QuestionAnswerListV2')
-    })
-
-    it('urls.answer.byPage(questionId, page)', function() {
-        expect(urls.answer.byPage(41325553)).to
-            .equal(baseurl + '/question/41325553?sort=created&page=1')
-
-        expect(urls.answer.byPage(41325553, 2)).to
-            .equal(baseurl + '/question/41325553?sort=created&page=2')
-    })
-
-    it('urls.question.byId(questionId)', function() {
-        expect(urls.question.byId(41325553)).to
-            .equal(baseurl + '/question/41325553')
+    it('urls.user.answers(uname, page)', function() {
+        expect(urls.user.answers('test', 1)).to
+            .equal(baseurl + '/people/test/answers?page=1')
     })
 
     it('urls.question.latest()', function() {
         expect(urls.question.latest()).to
             .equal(baseurl + '/log/questions')
+    })
+
+    it('urls.question.answersByVote()', function() {
+        expect(urls.question.answersByVote()).to
+            .equal(baseurl + '/node/QuestionAnswerListV2')
+    })
+
+    it('urls.question.answersByPage(questionId, page)', function() {
+        expect(urls.question.answersByPage(41325553)).to
+            .equal(baseurl + '/question/41325553?sort=created&page=1')
+
+        expect(urls.question.answersByPage(41325553, 2)).to
+            .equal(baseurl + '/question/41325553?sort=created&page=2')
     })
 })
