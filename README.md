@@ -74,20 +74,20 @@ getFollowees('excited-vczh')
 
 **User**
 
-- api.user(uname)
-- api.user(uname).detail()
-- api.user(uname).profile()
-- api.user(uname).followers(offset)
-- api.user(uname).followees(offset)
-- api.user(uname).answers(page)
+- `api.user(uname)`
+- `api.user(uname).detail()`
+- `api.user(uname).profile()`
+- `api.user(uname).followers(offset)`
+- `api.user(uname).followees(offset)`
+- `api.user(uname).answers(page)`
 
 **Question**
 
-- api.question(questionId)
-- api.question.latest()
-- api.question.list(start, offset)
-- api.question(questionId).answers().byVote(offset)
-- api.question(questionId).answers().byPage(page)
+- `api.question(questionId)`
+- `api.question.latest()`
+- `api.question.list(start, offset)`
+- `api.question(questionId).answers().byVote(offset)`
+- `api.question(questionId).answers().byPage(page)`
 
 ### License
 
