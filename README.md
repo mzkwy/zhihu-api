@@ -13,10 +13,11 @@ npm install zhihu-api --save
 ### Usage
 
 ```javascript
-const api = require('../zhihu-api')('./cookie')
+const fs = require('fs')
+const api = require('../zhihu-api')(fs.readFileSync('./cookie'))
 // You MUST specify a file in which your cookie is stored
 
-api.user.detail('excited-vczh')
+api.user('excited-vczh').detail()
     .then(console.log.bind(console))
     .catch(console.trace.bind(console))
 ```
@@ -26,7 +27,8 @@ which outputs:
 ```javascript
 {
     name: 'vczh',
-    link: '/people/excited-vczh',
+    uname: 'excited-vczh',
+    link: 'https://www.zhihu.com/people/excited-vczh',
     biology: '专业造轮子，前排已拉黑。gaclib.net',
     weibo: 'http://weibo.com/vczh',
     // ... ...
@@ -38,13 +40,14 @@ which outputs:
 The following example implements a quite simple crawler which crawls all followees of given account.
 
 ```javascript
-const api = require('zhihu-api')('./cookie')
+const fs = require('fs')
+const api = require('../zhihu-api')(fs.readFileSync('./cookie'))
 
 var offset = 0
 var idx = 0
 
-function getFollowees(profile) {
-    api.user.followees(profile, offset)
+function getFollowees(uname) {
+    api.user(uname).followees(offset)
         .then(followees => {
             offset += followees.length
 
@@ -58,19 +61,33 @@ function getFollowees(profile) {
 
             if (followees.length) {
                 setTimeout(function() {
-                    getFollowees(profile)
+                    getFollowees(uname)
                 }, 1000)
             }
         })
 }
 
-api.user.profilecard('excited-vczh')
-    .then(getFollowees)
+getFollowees('excited-vczh')
 ```
 
 ### API
 
-TODO
+**User**
+
+- api.user(uname)
+- api.user(uname).detail()
+- api.user(uname).profile()
+- api.user(uname).followers(offset)
+- api.user(uname).followees(offset)
+- api.user(uname).answers(page)
+
+**Question**
+
+- api.question(questionId)
+- api.question.latest()
+- api.question.list(start, offset)
+- api.question(questionId).answers().byVote(offset)
+- api.question(questionId).answers().byPage(page)
 
 ### License
 
