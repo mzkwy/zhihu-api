@@ -11,7 +11,7 @@ describe('request', function() {
     it('request(url)', function() {
         var req = request('https://httpbin.org/get?param=test')
         expect(req).to.be.a('promise')
-        return expect(req).to.eventually.to.be.ok
+        return expect(req).to.eventually.be.ok
     })
 
     it('request(url, data)', function() {
@@ -20,7 +20,7 @@ describe('request', function() {
         }
         var req = request('https://httpbin.org/post', data)
         expect(req).to.be.a('promise')
-        return expect(req).to.eventually.to.be.ok
+        return expect(req).to.eventually.be.ok
     })
 
     it('request.xsrf()', function() {

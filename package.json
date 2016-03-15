@@ -4,7 +4,7 @@
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/api/**/*.js"
   },
   "repository": {
     "type": "git",
