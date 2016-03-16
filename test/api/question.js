@@ -36,13 +36,13 @@ describe('api.question', function() {
         return expect(list).to.eventually.be.an('array')
     })
 
-    it('#question.answers.byVote(offset)', function() {
+    it('#question.answers().byVote(offset)', function() {
         var answers = question(qid).answers().byVote()
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
 
-    it('#question.answers.byPage(page)', function() {
+    it('#question.answers().byPage(page)', function() {
         var answers = question(qid).answers().byPage(1)
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
