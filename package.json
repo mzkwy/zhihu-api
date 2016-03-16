@@ -4,7 +4,7 @@
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js"
+    "test": "eslint lib/** && mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^5.2.0",
+    "eslint": "^2.4.0",
     "mocha": "^2.4.5"
   }
 }
