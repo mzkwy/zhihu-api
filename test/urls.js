@@ -49,4 +49,14 @@ describe('urls', function() {
         expect(urls.question.answersByPage(41325553, 2)).to
             .equal(baseurl + '/question/41325553?sort=created&page=2')
     })
+
+    it('urls.action.follow()', function() {
+        expect(urls.action.follow()).to
+            .equal(baseurl + '/node/MemberFollowBaseV2')
+    })
+
+    it('urls.action.unfollow()', function() {
+        expect(urls.action.unfollow()).to
+            .equal(baseurl + '/node/MemberFollowBaseV2')
+    })
 })
