@@ -71,4 +71,10 @@ describe('api.user', function() {
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
+
+    it('#user._hash()', function() {
+        var hash = user(uname)._hash()
+        expect(hash).to.be.a('promise')
+        return expect(hash).to.eventually.be.a('string')
+    })
 })
