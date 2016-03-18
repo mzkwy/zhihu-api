@@ -5,7 +5,6 @@ const chaiAsPromised = require('chai-as-promised')
 const config = require('../../lib/config')
 const user = require('../../lib/api/user')
 
-// set cookie
 var cookiePath = path.join(__dirname, '../../cookie')
 config.setCookie(fs.readFileSync(cookiePath))
 
