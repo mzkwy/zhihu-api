@@ -14,8 +14,10 @@ npm install zhihu-api --save
 
 ```javascript
 const fs = require('fs')
-const api = require('../zhihu-api')(fs.readFileSync('./cookie'))
-// You MUST specify a file in which your cookie is stored
+const api = require('zhihu-api')
+
+// cookie must be set before any request
+api.cookie(fs.readFileSync('./cookie'))
 
 api.user('excited-vczh').detail()
     .then(console.log.bind(console))
@@ -41,7 +43,9 @@ The following example implements a quite simple crawler which crawls all followe
 
 ```javascript
 const fs = require('fs')
-const api = require('../zhihu-api')(fs.readFileSync('./cookie'))
+const api = require('zhihu-api')
+
+api.cookie(fs.readFileSync('./cookie'))
 
 var offset = 0
 var idx = 0
@@ -88,6 +92,10 @@ getFollowees('excited-vczh')
 - `api.question.list(start, offset)`
 - `api.question(questionId).answers().byVote(offset)`
 - `api.question(questionId).answers().byPage(page)`
+
+**Misc**
+
+- `api.cookie([_cookie])`
 
 ### License
 
