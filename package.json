@@ -1,6 +1,6 @@
 {
   "name": "zhihu-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {

@@ -93,6 +93,11 @@ getFollowees('excited-vczh')
 - `api.question(questionId).answers().byVote(offset)`
 - `api.question(questionId).answers().byPage(page)`
 
+**Action**
+
+- `api.action.follow(uname)`
+- `api.action.unfollow(uname)`
+
 **Misc**
 
 - `api.cookie([_cookie])`
