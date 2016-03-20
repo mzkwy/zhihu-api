@@ -77,6 +77,12 @@ describe('api.user', function() {
         return expect(collections).to.eventually.be.an('array')
     })
 
+    it('#user.columns()', function() {
+        var columns = user(uname).columns()
+        expect(columns).to.be.a('promise')
+        return expect(columns).to.eventually.be.an('array')
+    })
+
     it('#user._hash()', function() {
         var hash = user(uname)._hash()
         expect(hash).to.be.a('promise')
