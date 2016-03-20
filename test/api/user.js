@@ -71,6 +71,12 @@ describe('api.user', function() {
         return expect(answers).to.eventually.be.an('array')
     })
 
+    it('#user.collections(page)', function() {
+        var collections = user(uname).collections(1)
+        expect(collections).to.be.a('promise')
+        return expect(collections).to.eventually.be.an('array')
+    })
+
     it('#user._hash()', function() {
         var hash = user(uname)._hash()
         expect(hash).to.be.a('promise')
