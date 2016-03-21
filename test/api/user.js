@@ -83,6 +83,12 @@ describe('api.user', function() {
         return expect(columns).to.eventually.be.an('array')
     })
 
+    it('#user.latestActivity()', function() {
+        var latestActivity = user(uname).latestActivity()
+        expect(latestActivity).to.be.a('promise')
+        return expect(latestActivity).to.eventually.be.an('object')
+    })
+
     it('#user._hash()', function() {
         var hash = user(uname)._hash()
         expect(hash).to.be.a('promise')
