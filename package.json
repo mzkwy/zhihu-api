@@ -4,7 +4,7 @@
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {
-    "test": "eslint 'lib/**' && mocha 'test/**/*.js'"
+    "test": "eslint lib/** && mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
