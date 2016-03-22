@@ -79,4 +79,9 @@ describe('urls', function() {
         expect(urls.action.unfollow()).to
             .equal(baseurl + '/node/MemberFollowBaseV2')
     })
+
+    it('urls.action.sendMessage()', function() {
+        expect(urls.action.sendMessage()).to
+            .equal(baseurl + '/inbox/post')
+    })
 })

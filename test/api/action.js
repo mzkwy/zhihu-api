@@ -25,4 +25,10 @@ describe('api.action', function() {
         expect(unfollow).to.be.a('promise')
         return expect(unfollow).to.eventually.be.an('object')
     })
+
+    it('api.action.sendMessage(uname)', function() {
+        var msg = action.sendMessage('ding_yao', 'hello')
+        expect(msg).to.be.a('promise')
+        return expect(msg).to.eventually.be.an('object')
+    })
 })

@@ -102,6 +102,7 @@ getFollowees('excited-vczh')
 
 - `api.action.follow(uname)`
 - `api.action.unfollow(uname)`
+- `api.action.sendMessage(uname, message)`
 
 **Misc**
 
