@@ -32,6 +32,16 @@ describe('urls', function() {
             .equal(baseurl + '/people/test/answers?page=1')
     })
 
+    it('urls.user.collections(uname, page)', function() {
+        expect(urls.user.collections('test')).to
+            .equal(baseurl + '/people/test/collections?page=1')
+    })
+
+    it('urls.user.columns(uname)', function() {
+        expect(urls.user.columns('test')).to
+            .equal(baseurl + '/people/test/posts')
+    })
+
     it('urls.question.latest()', function() {
         expect(urls.question.latest()).to
             .equal(baseurl + '/log/questions')
