@@ -42,6 +42,11 @@ describe('urls', function() {
             .equal(baseurl + '/people/test/posts')
     })
 
+    it('urls.user.topics(uname)', function() {
+        expect(urls.user.topics('test')).to
+            .equal(baseurl + '/people/test/topics')
+    })
+
     it('urls.question.latest()', function() {
         expect(urls.question.latest()).to
             .equal(baseurl + '/log/questions')

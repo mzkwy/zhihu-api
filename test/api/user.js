@@ -83,6 +83,12 @@ describe('api.user', function() {
         return expect(columns).to.eventually.be.an('array')
     })
 
+    it('#user.topics(offset)', function() {
+        var topics = user(uname).topics()
+        expect(topics).to.be.a('promise')
+        return expect(topics).to.eventually.be.an('array')
+    })
+
     it('#user.latestActivity()', function() {
         var latestActivity = user(uname).latestActivity()
         expect(latestActivity).to.be.a('promise')
