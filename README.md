@@ -88,6 +88,7 @@ getFollowees('excited-vczh')
 - `api.user(uname).columns()`
 - `api.user(uname).topics(offset)`
 - `api.user(uname).latestActivity()`
+- `api.user(uname).followedColumns(offset)`
 
 **Question**
 

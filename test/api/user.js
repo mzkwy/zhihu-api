@@ -95,6 +95,12 @@ describe('api.user', function() {
         return expect(latestActivity).to.eventually.be.an('object')
     })
 
+    it('#user.followedColumns(offset)', function() {
+        var columns = user(uname).followedColumns(0)
+        expect(columns).to.be.a('promise')
+        return expect(columns).to.eventually.be.an('array')
+    })
+
     it('#user._hash()', function() {
         var hash = user(uname)._hash()
         expect(hash).to.be.a('promise')

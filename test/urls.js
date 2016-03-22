@@ -47,6 +47,11 @@ describe('urls', function() {
             .equal(baseurl + '/people/test/topics')
     })
 
+    it('urls.user.followedColumns()', function() {
+        expect(urls.user.followedColumns()).to
+            .equal(baseurl + '/node/ProfileFollowedColumnsListV2')
+    })
+
     it('urls.question.latest()', function() {
         expect(urls.question.latest()).to
             .equal(baseurl + '/log/questions')
