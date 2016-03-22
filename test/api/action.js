@@ -31,4 +31,16 @@ describe('api.action', function() {
         expect(msg).to.be.a('promise')
         return expect(msg).to.eventually.be.an('object')
     })
+
+    it('api.action.voteDown(id)', function() {
+        var vote = action.voteDown(31433301)
+        expect(vote).to.be.a('promise')
+        return expect(vote).to.eventually.be.an('object')
+    })
+
+    it('api.action.voteUp(id)', function() {
+        var vote = action.voteUp(31433301)
+        expect(vote).to.be.a('promise')
+        return expect(vote).to.eventually.be.an('object')
+    })
 })

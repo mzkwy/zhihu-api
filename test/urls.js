@@ -84,4 +84,9 @@ describe('urls', function() {
         expect(urls.action.sendMessage()).to
             .equal(baseurl + '/inbox/post')
     })
+
+    it('urls.action.voteAnswer()', function() {
+        expect(urls.action.voteAnswer()).to
+            .equal(baseurl + '/node/AnswerVoteBarV2')
+    })
 })
