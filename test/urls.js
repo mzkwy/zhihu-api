@@ -7,6 +7,11 @@ describe('urls', function() {
         expect(urls.index()).to.equal(baseurl)
     })
 
+    it('urls.user.home(uname)', function() {
+        expect(urls.user.home('test')).to
+            .equal(baseurl + '/people/test')
+    })
+
     it('urls.user.detail(uname)', function() {
         expect(urls.user.detail('test')).to
             .equal(baseurl + '/people/test/about')
