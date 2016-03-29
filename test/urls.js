@@ -99,4 +99,9 @@ describe('urls', function() {
         expect(urls.topic.organize(1234567)).to
             .equal(baseurl + '/topic/1234567/organize')
     })
+
+    it('urls.topic.followers(id)', function() {
+        expect(urls.topic.followers(1234567)).to
+            .equal(baseurl + '/topic/1234567/followers')
+    })
 })

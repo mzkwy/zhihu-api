@@ -34,4 +34,10 @@ describe('api.topic', function() {
         expect(hierarchy).to.be.a('promise')
         return expect(hierarchy).to.eventually.be.an('object')
     })
+
+    it('#topic.followers(start, offset)', function() {
+        var followers = topic(topicId).followers()
+        expect(followers).to.be.a('promise')
+        return expect(followers).to.eventually.be.an('array')
+    })
 })
