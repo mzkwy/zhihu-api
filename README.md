@@ -112,6 +112,8 @@ getFollowees('excited-vczh')
 - `api.action.sendMessage(uname, message)`
 - `api.action.voteUp(id)`
 - `api.action.voteDown(id)`
+- `api.action.followTopic(tid)`
+- `api.action.unfollowTopic(tid)`
 
 **Misc**
 

@@ -95,6 +95,11 @@ describe('urls', function() {
             .equal(baseurl + '/node/AnswerVoteBarV2')
     })
 
+    it('urls.action.followTopic()', function() {
+        expect(urls.action.followTopic()).to
+            .equal(baseurl + '/node/TopicFollowBaseV2')
+    })
+
     it('urls.topic.organize(id)', function() {
         expect(urls.topic.organize(1234567)).to
             .equal(baseurl + '/topic/1234567/organize')

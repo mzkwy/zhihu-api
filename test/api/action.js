@@ -43,4 +43,16 @@ describe('api.action', function() {
         expect(vote).to.be.a('promise')
         return expect(vote).to.eventually.be.an('object')
     })
+
+    it('api.action.followTopic(tid)', function() {
+        var follow = action.followTopic(1525)
+        expect(follow).to.be.a('promise')
+        return expect(follow).to.eventually.be.an('object')
+    })
+
+    it('api.action.unfollowTopic(tid)', function() {
+        var unfollow = action.unfollowTopic(1525)
+        expect(unfollow).to.be.a('promise')
+        return expect(unfollow).to.eventually.be.an('object')
+    })
 })
