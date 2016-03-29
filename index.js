@@ -1,6 +1,7 @@
 const config = require('./lib/config')
 const action = require('./lib/api/action')
 const question = require('./lib/api/question')
+const topic = require('./lib/api/topic')
 const user = require('./lib/api/user')
 
 function cookie(_cookie) {
@@ -16,5 +17,6 @@ module.exports = {
     cookie,
     action,
     question,
+    topic,
     user
 }

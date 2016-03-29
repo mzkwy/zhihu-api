@@ -98,6 +98,12 @@ getFollowees('excited-vczh')
 - `api.question(questionId).answers().byVote(offset)`
 - `api.question(questionId).answers().byPage(page)`
 
+**Topic**
+
+- `api.topic(topicId)`
+- `api.topic.root()`
+- `api.topic(topicId).hierarchy()`
+
 **Action**
 
 - `api.action.follow(uname)`
