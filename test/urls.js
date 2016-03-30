@@ -112,4 +112,9 @@ describe('urls', function() {
         expect(urls.topic.topAnswers(1234567, 2)).to
             .equal(baseurl + '/topic/1234567/top-answers?page=2')
     })
+
+    it('urls.topic.hotAnswers(id)', function() {
+        expect(urls.topic.hotAnswers(1234567)).to
+            .equal(baseurl + '/topic/1234567/hot')
+    })
 })

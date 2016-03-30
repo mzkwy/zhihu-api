@@ -46,4 +46,10 @@ describe('api.topic', function() {
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
+
+    it('#topic.hotAnswers(page)', function() {
+        var answers = topic(topicId).hotAnswers()
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
 })
