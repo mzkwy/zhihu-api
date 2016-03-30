@@ -104,4 +104,12 @@ describe('urls', function() {
         expect(urls.topic.followers(1234567)).to
             .equal(baseurl + '/topic/1234567/followers')
     })
+
+    it('urls.topic.topAnswers(id, page)', function() {
+        expect(urls.topic.topAnswers(1234567)).to
+            .equal(baseurl + '/topic/1234567/top-answers?page=1')
+
+        expect(urls.topic.topAnswers(1234567, 2)).to
+            .equal(baseurl + '/topic/1234567/top-answers?page=2')
+    })
 })

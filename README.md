@@ -104,6 +104,7 @@ getFollowees('excited-vczh')
 - `api.topic.root()`
 - `api.topic(topicId).hierarchy()`
 - `api.topic(topicId).followers(start, offset)`
+- `api.topic(topicId).topAnswers(page)`
 
 **Action**
 

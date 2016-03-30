@@ -40,4 +40,10 @@ describe('api.topic', function() {
         expect(followers).to.be.a('promise')
         return expect(followers).to.eventually.be.an('array')
     })
+
+    it('#topic.topAnswers(page)', function() {
+        var answers = topic(topicId).topAnswers()
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
 })
