@@ -117,4 +117,20 @@ describe('urls', function() {
         expect(urls.topic.hotAnswers(1234567)).to
             .equal(baseurl + '/topic/1234567/hot')
     })
+
+    it('urls.topic.pendingQuestions(id)', function() {
+        expect(urls.topic.pendingQuestions(1234567)).to
+            .equal(baseurl + '/topic/1234567/questions?page=1')
+
+        expect(urls.topic.pendingQuestions(1234567, 2)).to
+            .equal(baseurl + '/topic/1234567/questions?page=2')
+    })
+
+    it('urls.topic.hotPendingQuestions(id)', function() {
+        expect(urls.topic.hotPendingQuestions(1234567)).to
+            .equal(baseurl + '/topic/1234567/unanswered?page=1')
+
+        expect(urls.topic.hotPendingQuestions(1234567, 2)).to
+            .equal(baseurl + '/topic/1234567/unanswered?page=2')
+    })
 })
