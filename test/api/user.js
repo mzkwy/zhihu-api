@@ -11,10 +11,10 @@ config.setCookie(fs.readFileSync(cookiePath))
 chai.use(chaiAsPromised)
 const expect = chai.expect
 
-var uname = 'excited-vczh'
+var uname = 'zhihuadmin'
 
 describe('api.user', function() {
-    this.timeout(10000)
+    this.timeout(15000)
 
     it('api.user(uname)', function() {
         var account = user(uname)
