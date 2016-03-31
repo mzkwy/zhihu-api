@@ -14,7 +14,7 @@ const expect = chai.expect
 var qid = 29568027
 
 describe('api.question', function() {
-    this.timeout(10000)
+    this.timeout(15000)
 
     it('api.question(id)', function() {
         var ques = question(qid)
@@ -35,14 +35,14 @@ describe('api.question', function() {
         return expect(list).to.eventually.be.an('array')
     })
 
-    it('#question.answers().byVote(offset)', function() {
-        var answers = question(qid).answers().byVote()
+    it('#question.answersByVote(offset)', function() {
+        var answers = question(qid).answersByVote()
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
 
-    it('#question.answers().byPage(page)', function() {
-        var answers = question(qid).answers().byPage(1)
+    it('#question.answersByPage(page)', function() {
+        var answers = question(qid).answersByPage(1)
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
