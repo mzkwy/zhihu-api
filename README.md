@@ -106,6 +106,7 @@ getFollowees('excited-vczh')
 - `api.topic(topicId).followers(start, offset)`
 - `api.topic(topicId).topAnswers(page)`
 - `api.topic(topicId).hotAnswers(offset)`
+- `api.topic(topicId).newAnswers(offset)`
 - `api.topic(topicId).pendingQuestions(page)`
 - `api.topic(topicId).hotPendingQuestions(page)`
 

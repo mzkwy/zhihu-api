@@ -47,9 +47,27 @@ describe('api.topic', function() {
         return expect(answers).to.eventually.be.an('array')
     })
 
-    it('#topic.hotAnswers(page)', function() {
+    it('#topic.hotAnswers(offset)', function() {
         var answers = topic(topicId).hotAnswers()
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
+    })
+
+    it('#topic.newAnswers(offset)', function() {
+        var answers = topic(topicId).newAnswers()
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
+
+    it('#topic.pendingQuestions(page)', function() {
+        var questions = topic(topicId).pendingQuestions()
+        expect(questions).to.be.a('promise')
+        return expect(questions).to.eventually.be.an('array')
+    })
+
+    it('#topic.hotPendingQuestions(page)', function() {
+        var questions = topic(topicId).hotPendingQuestions()
+        expect(questions).to.be.a('promise')
+        return expect(questions).to.eventually.be.an('array')
     })
 })

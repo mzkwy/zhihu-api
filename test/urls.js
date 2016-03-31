@@ -118,6 +118,11 @@ describe('urls', function() {
             .equal(baseurl + '/topic/1234567/hot')
     })
 
+    it('urls.topic.newAnswers(id)', function() {
+        expect(urls.topic.newAnswers(1234567)).to
+            .equal(baseurl + '/topic/1234567/newest')
+    })
+
     it('urls.topic.pendingQuestions(id)', function() {
         expect(urls.topic.pendingQuestions(1234567)).to
             .equal(baseurl + '/topic/1234567/questions?page=1')
