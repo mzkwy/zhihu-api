@@ -83,12 +83,12 @@ getFollowees('excited-vczh')
 - `api.user(uname).profile()`
 - `api.user(uname).followers(offset)`
 - `api.user(uname).followees(offset)`
-- `api.user(uname).answers(page)`
-- `api.user(uname).collections(page)`
-- `api.user(uname).columns()`
-- `api.user(uname).topics(offset)`
 - `api.user(uname).latestActivity()`
-- `api.user(uname).followedColumns(offset)`
+- `api.user(uname).answers(page)`
+- `api.user(uname).posts()`
+- `api.user(uname).collections(page)`
+- `api.user(uname).topics(offset)`
+- `api.user(uname).columns(offset)`
 
 **Question**
 
