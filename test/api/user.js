@@ -77,10 +77,10 @@ describe('api.user', function() {
         return expect(collections).to.eventually.be.an('array')
     })
 
-    it('#user.columns()', function() {
-        var columns = user(uname).columns()
-        expect(columns).to.be.a('promise')
-        return expect(columns).to.eventually.be.an('array')
+    it('#user.posts()', function() {
+        var posts = user(uname).posts()
+        expect(posts).to.be.a('promise')
+        return expect(posts).to.eventually.be.an('array')
     })
 
     it('#user.topics(offset)', function() {
@@ -95,8 +95,8 @@ describe('api.user', function() {
         return expect(latestActivity).to.eventually.be.an('object')
     })
 
-    it('#user.followedColumns(offset)', function() {
-        var columns = user(uname).followedColumns(0)
+    it('#user.columns(offset)', function() {
+        var columns = user(uname).columns(0)
         expect(columns).to.be.a('promise')
         return expect(columns).to.eventually.be.an('array')
     })

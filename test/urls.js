@@ -42,9 +42,9 @@ describe('urls', function() {
             .equal(baseurl + '/people/test/collections?page=1')
     })
 
-    it('urls.user.columns(uname)', function() {
-        expect(urls.user.columns('test')).to
-            .equal(baseurl + '/people/test/posts')
+    it('urls.user.posts(uname)', function() {
+        expect(urls.user.posts('test')).to
+            .equal(baseurl + '/people/test/posts?page=1')
     })
 
     it('urls.user.topics(uname)', function() {
@@ -52,8 +52,8 @@ describe('urls', function() {
             .equal(baseurl + '/people/test/topics')
     })
 
-    it('urls.user.followedColumns()', function() {
-        expect(urls.user.followedColumns()).to
+    it('urls.user.columns()', function() {
+        expect(urls.user.columns()).to
             .equal(baseurl + '/node/ProfileFollowedColumnsListV2')
     })
 
