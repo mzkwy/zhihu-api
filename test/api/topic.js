@@ -23,10 +23,11 @@ describe('api.topic', function() {
         expect(tpc._topic.id).to.equal(topicId)
     })
 
-    it('api.topic.root()', function() {
-        var rt = topic.root()
-        expect(rt).to.be.a('promise')
-        return expect(rt).to.eventually.be.an('object')
+    it('api.topic.root', function() {
+        var rt = topic.root
+        expect(rt).to.be.an('object')
+        expect(rt).to.have.property('_topic')
+        expect(rt._topic).to.have.property('id')
     })
 
     it('#topic.hierarchy()', function() {
