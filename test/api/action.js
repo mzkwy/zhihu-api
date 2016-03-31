@@ -12,7 +12,7 @@ chai.use(chaiAsPromised)
 const expect = chai.expect
 
 describe('api.action', function() {
-    this.timeout(10000)
+    this.timeout(15000)
 
     it('api.action.follow(uname)', function() {
         var follow = action.follow('ding_yao')
