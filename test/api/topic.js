@@ -14,7 +14,7 @@ const expect = chai.expect
 var topicId = 19554791
 
 describe('api.topic', function() {
-    this.timeout(10000)
+    this.timeout(15000)
 
     it('api.topic(id)', function() {
         var tpc = topic(topicId)
@@ -25,9 +25,7 @@ describe('api.topic', function() {
 
     it('api.topic.root', function() {
         var rt = topic.root
-        expect(rt).to.be.an('object')
-        expect(rt).to.have.property('_topic')
-        expect(rt._topic).to.have.property('id')
+        expect(rt instanceof topic).to.be.true
     })
 
     it('#topic.hierarchy()', function() {
