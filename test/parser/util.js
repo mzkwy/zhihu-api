@@ -32,4 +32,17 @@ describe('parser util', function() {
         expect(util.toNum('123hell')).to.equal(123)
         expect(util.toNum('12345')).to.equal(12345)
     })
+
+    it('util.forEach(arr, fn)', function() {
+        var arr = [1, 2, 3]
+        var res = []
+        util.forEach(arr, x => res.push(x * x))
+        expect(res).to.eql([1, 4, 9])
+    })
+
+    it('util.map(arr, fn)', function() {
+        var arr = [1, 2, 3]
+        var res = util.map(arr, x => x * x)
+        expect(res).to.eql([1, 4, 9])
+    })
 })
