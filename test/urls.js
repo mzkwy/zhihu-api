@@ -100,6 +100,11 @@ describe('urls', function() {
             .equal(baseurl + '/node/TopicFollowBaseV2')
     })
 
+    it('urls.action.block(uname)', function() {
+        expect(urls.action.block('test')).to
+            .equal(baseurl + '/people/test/block')
+    })
+
     it('urls.topic.organize(id)', function() {
         expect(urls.topic.organize(1234567)).to
             .equal(baseurl + '/topic/1234567/organize')

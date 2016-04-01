@@ -120,6 +120,8 @@ getFollowees('excited-vczh')
 - `api.action.voteDown(id)`
 - `api.action.followTopic(tid)`
 - `api.action.unfollowTopic(tid)`
+- `api.action.block(uname)`
+- `api.action.unblock(uname)`
 
 **Misc**
 
