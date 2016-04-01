@@ -32,19 +32,24 @@ describe('urls', function() {
             .equal(baseurl + '/node/ProfileFolloweesListV2')
     })
 
+    it('urls.user.questions(uname, page)', function() {
+        expect(urls.user.questions('test', 1)).to
+            .equal(baseurl + '/people/test/asks?page=1')
+    })
+
     it('urls.user.answers(uname, page)', function() {
         expect(urls.user.answers('test', 1)).to
             .equal(baseurl + '/people/test/answers?page=1')
     })
 
-    it('urls.user.collections(uname, page)', function() {
-        expect(urls.user.collections('test')).to
-            .equal(baseurl + '/people/test/collections?page=1')
-    })
-
     it('urls.user.posts(uname)', function() {
         expect(urls.user.posts('test')).to
             .equal(baseurl + '/people/test/posts?page=1')
+    })
+
+    it('urls.user.collections(uname, page)', function() {
+        expect(urls.user.collections('test')).to
+            .equal(baseurl + '/people/test/collections?page=1')
     })
 
     it('urls.user.topics(uname)', function() {

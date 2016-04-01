@@ -65,10 +65,28 @@ describe('api.user', function() {
         return expect(followees).to.eventually.be.an('array')
     })
 
+    it('#user.latestActivity()', function() {
+        var latestActivity = user(uname).latestActivity()
+        expect(latestActivity).to.be.a('promise')
+        return expect(latestActivity).to.eventually.be.an('object')
+    })
+
+    it('#user.questions(page)', function() {
+        var questions = user(uname).questions()
+        expect(questions).to.be.a('promise')
+        return expect(questions).to.eventually.be.an('array')
+    })
+
     it('#user.answers(page)', function() {
         var answers = user(uname).answers(1)
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
+    })
+
+    it('#user.posts(page)', function() {
+        var posts = user(uname).posts()
+        expect(posts).to.be.a('promise')
+        return expect(posts).to.eventually.be.an('array')
     })
 
     it('#user.collections(page)', function() {
@@ -77,22 +95,10 @@ describe('api.user', function() {
         return expect(collections).to.eventually.be.an('array')
     })
 
-    it('#user.posts()', function() {
-        var posts = user(uname).posts()
-        expect(posts).to.be.a('promise')
-        return expect(posts).to.eventually.be.an('array')
-    })
-
     it('#user.topics(offset)', function() {
         var topics = user(uname).topics()
         expect(topics).to.be.a('promise')
         return expect(topics).to.eventually.be.an('array')
-    })
-
-    it('#user.latestActivity()', function() {
-        var latestActivity = user(uname).latestActivity()
-        expect(latestActivity).to.be.a('promise')
-        return expect(latestActivity).to.eventually.be.an('object')
     })
 
     it('#user.columns(offset)', function() {
