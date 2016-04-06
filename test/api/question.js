@@ -46,4 +46,10 @@ describe('api.question', function() {
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
+
+    it('#question.detail()', function() {
+        var detail = question(qid).detail()
+        expect(detail).to.be.a('promise')
+        return expect(detail).to.eventually.be.an('object')
+    })
 })
