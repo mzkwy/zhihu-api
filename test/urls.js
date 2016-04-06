@@ -87,6 +87,11 @@ describe('urls', function() {
             expect(urls.question.answersByPage(41325553, 2)).to
                 .equal(baseurl + '/question/41325553?sort=created&page=2')
         })
+
+        it('urls.question.followers(questionId)', function() {
+            expect(urls.question.followers(1234567)).to
+                .equal(baseurl + '/question/1234567/followers')
+        })
     })
 
     describe('urls.action', function() {

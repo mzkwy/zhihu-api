@@ -99,6 +99,7 @@ getFollowees('excited-vczh')
 - `api.question(questionId).answersByVote(offset)`
 - `api.question(questionId).answersByPage(page)`
 - `api.question(questionId).detail()`
+- `api.question(questionId).followers(offset)`
 
 **Topic**
 

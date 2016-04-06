@@ -52,4 +52,10 @@ describe('api.question', function() {
         expect(detail).to.be.a('promise')
         return expect(detail).to.eventually.be.an('object')
     })
+
+    it('#question.followers(offset)', function() {
+        var followers = question(qid).followers()
+        expect(followers).to.be.a('promise')
+        return expect(followers).to.eventually.be.an('array')
+    })
 })
