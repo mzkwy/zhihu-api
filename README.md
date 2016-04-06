@@ -117,11 +117,13 @@ getFollowees('excited-vczh')
 
 - `api.action.follow(uname)`
 - `api.action.unfollow(uname)`
-- `api.action.sendMessage(uname, message)`
-- `api.action.voteUp(id)`
-- `api.action.voteDown(id)`
 - `api.action.followTopic(tid)`
 - `api.action.unfollowTopic(tid)`
+- `api.action.followQuestion(qid)`
+- `api.action.unfollowQuestion(qid)`
+- `api.action.voteUp(id)`
+- `api.action.voteDown(id)`
+- `api.action.sendMessage(uname, message)`
 - `api.action.block(uname)`
 - `api.action.unblock(uname)`
 

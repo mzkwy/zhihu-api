@@ -100,9 +100,14 @@ describe('urls', function() {
                 .equal(baseurl + '/node/MemberFollowBaseV2')
         })
 
-        it('urls.action.sendMessage()', function() {
-            expect(urls.action.sendMessage()).to
-                .equal(baseurl + '/inbox/post')
+        it('urls.action.followTopic()', function() {
+            expect(urls.action.followTopic()).to
+                .equal(baseurl + '/node/TopicFollowBaseV2')
+        })
+
+        it('urls.action.followQuestion()', function() {
+            expect(urls.action.followQuestion()).to
+                .equal(baseurl + '/node/QuestionFollowBaseV2')
         })
 
         it('urls.action.voteAnswer()', function() {
@@ -110,9 +115,9 @@ describe('urls', function() {
                 .equal(baseurl + '/node/AnswerVoteBarV2')
         })
 
-        it('urls.action.followTopic()', function() {
-            expect(urls.action.followTopic()).to
-                .equal(baseurl + '/node/TopicFollowBaseV2')
+        it('urls.action.sendMessage()', function() {
+            expect(urls.action.sendMessage()).to
+                .equal(baseurl + '/inbox/post')
         })
 
         it('urls.action.block(uname)', function() {
