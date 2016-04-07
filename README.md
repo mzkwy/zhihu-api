@@ -1,4 +1,4 @@
-# Zhihu API
+# zhihu API
 
 **UNOFFICIAL** API for [zhihu](https://www.zhihu.com).
 
