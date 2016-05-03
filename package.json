@@ -28,7 +28,6 @@
   "homepage": "https://github.com/syaning/zhihu-api#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
-    "entities": "^1.1.1",
     "request": "^2.69.0"
   },
   "devDependencies": {
