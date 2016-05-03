@@ -2,8 +2,10 @@ const expect = require('chai').expect
 const cheerio = require('cheerio')
 const util = require('../../lib/parser/util')
 
-var domstr = '<div id="example" class="container" data-name="test" data-id="123456" data-count="0">hello</div>'
-var $ = cheerio.load(domstr)
+var domstr = '<div id="example" class="container" data-name="test" data-id="123456" data-count="0">hello 世界</div>'
+var $ = cheerio.load(domstr, {
+    decodeEntities: false
+})
 var ele = $('div')
 
 describe('parser util', function() {
@@ -13,7 +15,7 @@ describe('parser util', function() {
     })
 
     it('util.getText(ele)', function() {
-        expect(util.getText(ele)).to.equal('hello')
+        expect(util.getText(ele)).to.equal('hello 世界')
     })
 
     it('util.getData(ele, name)', function() {
@@ -21,6 +23,11 @@ describe('parser util', function() {
         expect(util.getData(ele, 'id')).to.equal(123456)
         expect(util.getData(ele, 'count')).to.equal(0)
         expect(util.getData(ele, 'none')).to.equal('')
+    })
+
+    it('util.getHtml(ele)', function() {
+        expect(util.getHtml($)).to.equal(domstr)
+        expect(util.getHtml(ele)).to.equal('hello 世界')
     })
 
     it('util.toNum(val)', function() {
