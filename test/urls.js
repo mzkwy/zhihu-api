@@ -70,11 +70,6 @@ describe('urls', function() {
                 .equal(baseurl + '/question/1234567')
         })
 
-        it('urls.question.latest()', function() {
-            expect(urls.question.latest()).to
-                .equal(baseurl + '/log/questions')
-        })
-
         it('urls.question.answersByVote()', function() {
             expect(urls.question.answersByVote()).to
                 .equal(baseurl + '/node/QuestionAnswerListV2')

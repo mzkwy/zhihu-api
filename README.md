@@ -94,8 +94,6 @@ getFollowees('excited-vczh')
 **Question**
 
 - `api.question(questionId)`
-- `api.question.latest()`
-- `api.question.list(start, offset)`
 - `api.question(questionId).answersByVote(offset)`
 - `api.question(questionId).answersByPage(page)`
 - `api.question(questionId).detail()`

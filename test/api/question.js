@@ -23,18 +23,6 @@ describe('api.question', function() {
         expect(ques._question.id).to.equal(qid)
     })
 
-    it('api.question.latest()', function() {
-        var list = question.latest()
-        expect(list).to.be.a('promise')
-        return expect(list).to.eventually.be.an('array')
-    })
-
-    it('api.question.list(start, offset)', function() {
-        var list = question.latest(null, 0)
-        expect(list).to.be.a('promise')
-        return expect(list).to.eventually.be.an('array')
-    })
-
     it('#question.answersByVote(offset)', function() {
         var answers = question(qid).answersByVote()
         expect(answers).to.be.a('promise')
