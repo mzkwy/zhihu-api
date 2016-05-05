@@ -1,19 +1,9 @@
-const fs = require('fs')
-const path = require('path')
-const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
-const config = require('../../lib/config')
-const action = require('../../lib/api/action')
+const action = require('../global/api').action
+const expect = require('../global/expect')
 
-var cookiePath = path.join(__dirname, '../../cookie')
-config.setCookie(fs.readFileSync(cookiePath))
-
-chai.use(chaiAsPromised)
-const expect = chai.expect
-
-const uname = 'ding_yao'
-const answerId = 31433301
-const topicId = 1525
+var uname = 'ding_yao'
+var answerId = 31433301
+var topicId = 1525
 
 describe('api.action', function() {
     this.timeout(15000)

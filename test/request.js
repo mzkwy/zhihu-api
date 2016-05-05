@@ -1,9 +1,5 @@
-const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
-const request = require('../lib/request')
-
-chai.use(chaiAsPromised)
-const expect = chai.expect
+const request = require('./global/api')._request
+const expect = require('./global/expect')
 
 describe('request', function() {
     this.timeout(15000)

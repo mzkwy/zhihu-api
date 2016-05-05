@@ -1,15 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
-const config = require('../../lib/config')
-const question = require('../../lib/api/question')
-
-var cookiePath = path.join(__dirname, '../../cookie')
-config.setCookie(fs.readFileSync(cookiePath))
-
-chai.use(chaiAsPromised)
-const expect = chai.expect
+const question = require('../global/api').question
+const expect = require('../global/expect')
 
 var qid = 29568027
 

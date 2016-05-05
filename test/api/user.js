@@ -1,15 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
-const config = require('../../lib/config')
-const user = require('../../lib/api/user')
-
-var cookiePath = path.join(__dirname, '../../cookie')
-config.setCookie(fs.readFileSync(cookiePath))
-
-chai.use(chaiAsPromised)
-const expect = chai.expect
+const user = require('../global/api').user
+const expect = require('../global/expect')
 
 var uname = 'zhihuadmin'
 
