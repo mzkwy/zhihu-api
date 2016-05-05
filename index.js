@@ -1,4 +1,5 @@
 const config = require('./lib/config')
+const request = require('./lib/request')
 const action = require('./lib/api/action')
 const answer = require('./lib/api/answer')
 const question = require('./lib/api/question')
@@ -15,6 +16,7 @@ function cookie(_cookie) {
 
 module.exports = {
     _config: config,
+    _request: request,
     cookie,
     action,
     answer,
