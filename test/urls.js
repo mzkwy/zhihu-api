@@ -89,6 +89,13 @@ describe('urls', function() {
         })
     })
 
+    describe('urls.answer', function() {
+        it('urls.answer.voters()', function() {
+            expect(urls.answer.voters(1234567)).to
+                .equal(baseurl + '/answer/1234567/voters_profile')
+        })
+    })
+
     describe('urls.action', function() {
         it('urls.action.follow()', function() {
             expect(urls.action.follow()).to

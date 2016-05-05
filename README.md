@@ -126,6 +126,11 @@ getFollowees('excited-vczh')
 - `api.action.block(uname)`
 - `api.action.unblock(uname)`
 
+**Answer**
+
+- `api.answer(aid)`
+- `api.answer(aid).voters([next])`
+
 **Misc**
 
 - `api.cookie([_cookie])`
