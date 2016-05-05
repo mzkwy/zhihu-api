@@ -112,4 +112,10 @@ describe('api.user', function() {
         expect(hash).to.be.a('promise')
         return expect(hash).to.eventually.be.a('string')
     })
+
+    it('#user.status()', function() {
+        var status = user(uname).status()
+        expect(status).to.be.a('promise')
+        return expect(status).to.eventually.have.all.keys(['status'])
+    })
 })
