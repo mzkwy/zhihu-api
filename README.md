@@ -137,4 +137,4 @@ getFollowees('excited-vczh')
 
 ### License
 
-[WTFPL](http://www.wtfpl.net/)
+MIT
