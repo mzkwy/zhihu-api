@@ -14,7 +14,7 @@ api.user('zhihuadmin').followees()
     .catch(console.trace)
 ```
 
-The result is:
+the result is:
 
 ```javascript
 [{
@@ -57,7 +57,7 @@ function next() {
                 console.log('Done!')
             }
         })
-        .catch(console.log)
+        .catch(console.trace)
 }
 
 function handleFollowees(data) {

@@ -14,7 +14,7 @@ api.user('zhihuadmin').latestActivity()
     .catch(console.trace)
 ```
 
-The result is:
+the result is:
 
 ```javascript
 {
