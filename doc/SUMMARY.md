@@ -1,7 +1,7 @@
 # Summary
 
-- [api.user](./user/README.md)
-    + [User](./user/user.md)
+- [User](./user/README.md)
+    + [api.user](./user/user.md)
     + [user.detail](./user/detail.md)
     + [user.profile](./user/profile.md)
     + [user.followers](./user/followers.md)
@@ -14,3 +14,9 @@
     + [user.topics](./user/topics.md)
     + [user.columns](./user/columns.md)
     + [user.status](./user/status.md)
+- [Question](./question/README.md)
+    + [api.question](./question/question.md)
+    + [question.answersByVote](./question/answersByVote.md)
+    + [question.answersByPage](./question/answersByPage.md)
+    + [question.detail](./question/detail.md)
+    + [question.followers](./question/followers.md)

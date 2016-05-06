@@ -49,8 +49,8 @@ function next() {
     user.collections(page)
         .then(data => {
             if (data.length) {
-                handleCollections(data)
                 page++
+                handleCollections(data)
                 next()
             } else {
                 console.log('Done!')

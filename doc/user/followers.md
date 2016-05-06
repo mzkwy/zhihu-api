@@ -44,8 +44,8 @@ next()
 function next() {
     user.followers(offset)
         .then(data => {
-            offset += data.length
             if (data.length) {
+                offset += data.length
                 handleFollowers(data)
                 next()
             } else {

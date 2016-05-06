@@ -44,8 +44,8 @@ next()
 function next() {
     user.topics(offset)
         .then(data => {
-            offset += data.length
             if (data.length) {
+                offset += data.length
                 handleTopics(data)
                 next()
             } else {

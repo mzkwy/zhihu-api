@@ -1,4 +1,4 @@
-# api.user
+# User
 
 - [User(uname)](./user.md)
     + [detail()](./detail.md)

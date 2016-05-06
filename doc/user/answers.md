@@ -53,8 +53,8 @@ function next() {
     user.answers(page)
         .then(data => {
             if (data.length) {
-                handleAnswers(data)
                 page++
+                handleAnswers(data)
                 next()
             } else {
                 console.log('Done!')

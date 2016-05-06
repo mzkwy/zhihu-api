@@ -49,8 +49,8 @@ next()
 function next() {
     user.followees(offset)
         .then(data => {
-            offset += data.length
             if (data.length) {
+                offset += data.length
                 handleFollowees(data)
                 next()
             } else {

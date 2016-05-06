@@ -46,8 +46,8 @@ next()
 function next() {
     user.columns(offset)
         .then(data => {
-            offset += data.length
             if (data.length) {
+                offset += data.length
                 handleColumns(data)
                 next()
             } else {

@@ -42,8 +42,8 @@ function next() {
     user.posts(page)
         .then(data => {
             if (data.length) {
-                handlePosts(data)
                 page++
+                handlePosts(data)
                 next()
             } else {
                 console.log('Done!')
