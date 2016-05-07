@@ -1,4 +1,4 @@
-# Introduction
+# zhihu API
 
 <a class="github-button" href="https://github.com/syaning/zhihu-api" data-icon="octicon-star" data-count-href="/syaning/zhihu-api/stargazers" data-count-api="/repos/syaning/zhihu-api#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star syaning/zhihu-api on GitHub">Star</a>
 
