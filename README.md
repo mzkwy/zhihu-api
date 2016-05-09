@@ -2,7 +2,7 @@
 
 **UNOFFICIAL** API for [zhihu](https://www.zhihu.com).
 
-This projects implements only basic data APIs, meaning that you should implement your own logical code (by using this project) if you want a crawler/spider.
+This projects implements only basic data interfaces, meaning that you should implement your own logical code (by using this project) if you want a crawler/spider.
 
 See [doc](http://syaning.com/zhihu-api/index.html).
 
