@@ -6,7 +6,7 @@ var uname = 'zhihuadmin'
 describe('api.user', function() {
     this.timeout(15000)
 
-    it('api.user(uname)', function() {
+    it('User(uname)', function() {
         var account = user(uname)
         expect(account).to.have.property('_user')
         expect(account._user).to.have.property('uname')
@@ -20,7 +20,7 @@ describe('api.user', function() {
         expect(account._user.uname).to.equal(uname)
     })
 
-    it('#user.detail()', function() {
+    it('user.detail()', function() {
         var keys = ['name', 'uname', 'link', 'biology', 'weibo',
             'avatar', 'location', 'business', 'gender', 'company',
             'position', 'school', 'major', 'description', 'hash',
@@ -32,7 +32,7 @@ describe('api.user', function() {
         return expect(detail).to.eventually.have.all.keys(keys)
     })
 
-    it('#user.profile()', function() {
+    it('user.profile()', function() {
         var keys = ['name', 'uname', 'link', 'avatar', 'gender',
             'biology', 'answers', 'posts', 'followers', 'hash', 'crawltime'
         ]
@@ -41,71 +41,71 @@ describe('api.user', function() {
         return expect(profile).to.eventually.have.all.keys(keys)
     })
 
-    it('#user.followers()', function() {
+    it('user.followers([offset])', function() {
         var keys = ['name', 'uname', 'link', 'hash']
         var followers = user(uname).followers()
         expect(followers).to.be.a('promise')
         return expect(followers).to.eventually.be.an('array')
     })
 
-    it('#user.followees()', function() {
+    it('user.followees([offset])', function() {
         var keys = ['name', 'uname', 'link', 'hash']
         var followees = user(uname).followees()
         expect(followees).to.be.a('promise')
         return expect(followees).to.eventually.be.an('array')
     })
 
-    it('#user.latestActivity()', function() {
+    it('user.latestActivity()', function() {
         var latestActivity = user(uname).latestActivity()
         expect(latestActivity).to.be.a('promise')
         return expect(latestActivity).to.eventually.be.an('object')
     })
 
-    it('#user.questions(page)', function() {
+    it('user.questions([page])', function() {
         var questions = user(uname).questions()
         expect(questions).to.be.a('promise')
         return expect(questions).to.eventually.be.an('array')
     })
 
-    it('#user.answers(page)', function() {
+    it('user.answers([page])', function() {
         var answers = user(uname).answers(1)
         expect(answers).to.be.a('promise')
         return expect(answers).to.eventually.be.an('array')
     })
 
-    it('#user.posts(page)', function() {
+    it('user.posts([page])', function() {
         var posts = user(uname).posts()
         expect(posts).to.be.a('promise')
         return expect(posts).to.eventually.be.an('array')
     })
 
-    it('#user.collections(page)', function() {
+    it('user.collections([page])', function() {
         var collections = user(uname).collections(1)
         expect(collections).to.be.a('promise')
         return expect(collections).to.eventually.be.an('array')
     })
 
-    it('#user.topics(offset)', function() {
+    it('user.topics([offset])', function() {
         var topics = user(uname).topics()
         expect(topics).to.be.a('promise')
         return expect(topics).to.eventually.be.an('array')
     })
 
-    it('#user.columns(offset)', function() {
+    it('user.columns([offset])', function() {
         var columns = user(uname).columns(0)
         expect(columns).to.be.a('promise')
         return expect(columns).to.eventually.be.an('array')
+    })
+
+    it('user.status()', function() {
+        var status = user(uname).status()
+        expect(status).to.be.a('promise')
+        return expect(status).to.eventually.have.all.keys(['status', 'crawltime'])
     })
 
     it('#user._hash()', function() {
         var hash = user(uname)._hash()
         expect(hash).to.be.a('promise')
         return expect(hash).to.eventually.be.a('string')
-    })
-
-    it('#user.status()', function() {
-        var status = user(uname).status()
-        expect(status).to.be.a('promise')
-        return expect(status).to.eventually.have.all.keys(['status'])
     })
 })

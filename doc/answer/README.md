@@ -10,4 +10,4 @@ api.answer({ aid: 13111581 })
 ```
 
 - [Answer(aid)](./)
-    + [answer.voters([next])](./voters.md)
+    + [voters([next])](./voters.md)

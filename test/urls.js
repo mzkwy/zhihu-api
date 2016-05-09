@@ -65,7 +65,7 @@ describe('urls', function() {
     })
 
     describe('urls.question', function() {
-        it('urls.question.home(questionId)', function() {
+        it('urls.question.home(id)', function() {
             expect(urls.question.home(1234567)).to
                 .equal(baseurl + '/question/1234567')
         })
@@ -75,7 +75,7 @@ describe('urls', function() {
                 .equal(baseurl + '/node/QuestionAnswerListV2')
         })
 
-        it('urls.question.answersByPage(questionId, page)', function() {
+        it('urls.question.answersByPage(id, page)', function() {
             expect(urls.question.answersByPage(41325553)).to
                 .equal(baseurl + '/question/41325553?sort=created&page=1')
 
@@ -83,7 +83,7 @@ describe('urls', function() {
                 .equal(baseurl + '/question/41325553?sort=created&page=2')
         })
 
-        it('urls.question.followers(questionId)', function() {
+        it('urls.question.followers(id)', function() {
             expect(urls.question.followers(1234567)).to
                 .equal(baseurl + '/question/1234567/followers')
         })

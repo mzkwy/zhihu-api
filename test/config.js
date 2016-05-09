@@ -10,6 +10,11 @@ describe('config', function() {
             .which.is.a('string')
     })
 
+    it('config.data', function() {
+        expect(config.data).to.have.property('xsrf')
+            .which.is.a('string')
+    })
+
     it('config.setCookie(cookie)', function() {
         var cookie = 'this is my cookie'
         expect(config.setCookie).to.be.a('function')
