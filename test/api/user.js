@@ -55,10 +55,10 @@ describe('api.user', function() {
         return expect(followees).to.eventually.be.an('array')
     })
 
-    it('user.latestActivity()', function() {
-        var latestActivity = user(uname).latestActivity()
-        expect(latestActivity).to.be.a('promise')
-        return expect(latestActivity).to.eventually.be.an('object')
+    it('user.activities([start])', function() {
+        var activities = user(uname).activities()
+        expect(activities).to.be.a('promise')
+        return expect(activities).to.eventually.be.an('array')
     })
 
     it('user.questions([page])', function() {

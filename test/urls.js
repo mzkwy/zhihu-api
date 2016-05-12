@@ -62,6 +62,11 @@ describe('urls', function() {
             expect(urls.user.columns()).to
                 .equal(baseurl + '/node/ProfileFollowedColumnsListV2')
         })
+
+        it('urls.user.activities(uname)', function() {
+            expect(urls.user.activities('test')).to
+                .equal(baseurl + '/people/test/activities')
+        })
     })
 
     describe('urls.question', function() {
