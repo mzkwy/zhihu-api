@@ -5,7 +5,7 @@
     + [user.profile](./user/profile.md)
     + [user.followers](./user/followers.md)
     + [user.followees](./user/followees.md)
-    + [user.latestActivity](./user/latestActivity.md)
+    + [user.activities](./user/activities.md)
     + [user.questions](./user/questions.md)
     + [user.answers](./user/answers.md)
     + [user.posts](./user/posts.md)
