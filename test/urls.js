@@ -95,9 +95,17 @@ describe('urls', function() {
     })
 
     describe('urls.answer', function() {
-        it('urls.answer.voters()', function() {
+        it('urls.answer.voters(aid)', function() {
             expect(urls.answer.voters(1234567)).to
                 .equal(baseurl + '/answer/1234567/voters_profile')
+        })
+
+        it('urls.answer.comments(aid, page)', function() {
+            expect(urls.answer.comments(1234567)).to
+                .equal(baseurl + '/r/answers/1234567/comments?page=1')
+
+            expect(urls.answer.comments(1234567, 2)).to
+                .equal(baseurl + '/r/answers/1234567/comments?page=2')
         })
     })
 
