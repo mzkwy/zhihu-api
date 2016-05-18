@@ -1,7 +1,7 @@
 # topic.followers
 
 ```javascript
-topic.followers([start, [offset]])
+topic.followers([start[, offset]])
 ```
 
 Get users that followed this topic. The param `start` is a timestamp in seconds.

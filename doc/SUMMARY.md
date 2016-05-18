@@ -36,6 +36,7 @@
     + [block/unblock](./action/block.md)
 - [api.answer](./answer/README.md)
     + [answer.voters](./answer/voters.md)
+    + [answer.comments](./answer/comments.md)
 - [Misc](./misc/README.md)
     + [api.cookie](./misc/cookie.md)
     + [api._config](./misc/config.md)
