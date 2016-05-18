@@ -107,6 +107,14 @@ describe('urls', function() {
             expect(urls.answer.comments(1234567, 2)).to
                 .equal(baseurl + '/r/answers/1234567/comments?page=2')
         })
+
+        it('urls.answer.explore(offset, type)', function() {
+            expect(urls.answer.explore(10, 'day')).to
+                .equal(baseurl + '/node/ExploreAnswerListV2?params={"offset":10,"type":"day"}')
+
+            expect(urls.answer.explore(10, 'month')).to
+                .equal(baseurl + '/node/ExploreAnswerListV2?params={"offset":10,"type":"month"}')
+        })
     })
 
     describe('urls.action', function() {

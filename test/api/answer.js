@@ -24,4 +24,16 @@ describe('api.answer', function() {
         expect(comments).to.be.a('promise')
         return expect(comments).to.eventually.be.an('object')
     })
+
+    it('Answer.exploreDay([offset])', function() {
+        var answers = answer.exploreDay()
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
+
+    it('Answer.exploreMonth([offset])', function() {
+        var answers = answer.exploreMonth()
+        expect(answers).to.be.a('promise')
+        return expect(answers).to.eventually.be.an('array')
+    })
 })
