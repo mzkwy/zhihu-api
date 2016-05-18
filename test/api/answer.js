@@ -18,4 +18,10 @@ describe('api.answer', function() {
         expect(voters).to.be.a('promise')
         return expect(voters).to.eventually.be.an('object')
     })
+
+    it('answer.comments([page])', function() {
+        var comments = answer(aid).comments()
+        expect(comments).to.be.a('promise')
+        return expect(comments).to.eventually.be.an('object')
+    })
 })
