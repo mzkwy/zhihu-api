@@ -4,7 +4,7 @@
 Answer.exploreMonth([offset])
 ```
 
-Get today's hotest answers.
+Get hotest answers of this month.
 
 For example;
 
