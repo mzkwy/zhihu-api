@@ -37,6 +37,8 @@
 - [api.answer](./answer/README.md)
     + [answer.voters](./answer/voters.md)
     + [answer.comments](./answer/comments.md)
+    + [Answer.exploreDay](./answer/exploreDay.md)
+    + [Answer.exploreMonth](./answer/exploreMonth.md)
 - [Misc](./misc/README.md)
     + [api.cookie](./misc/cookie.md)
     + [api._config](./misc/config.md)
