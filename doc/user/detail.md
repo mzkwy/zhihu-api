@@ -42,6 +42,7 @@ the result is:
     logs: 65,
     followees: 3,
     followers: 29922,
+    status: '',
     crawltime: 1462432965675
 }
 ```

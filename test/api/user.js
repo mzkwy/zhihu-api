@@ -25,7 +25,7 @@ describe('api.user', function() {
             'avatar', 'location', 'business', 'gender', 'company',
             'position', 'school', 'major', 'description', 'hash',
             'agrees', 'thanks', 'asks', 'answers', 'posts', 'collections',
-            'logs', 'followees', 'followers', 'crawltime'
+            'logs', 'followees', 'followers', 'status', 'crawltime'
         ]
         var detail = user(uname).detail()
         expect(detail).to.be.a('promise')
@@ -95,12 +95,6 @@ describe('api.user', function() {
         var columns = user(uname).columns(0)
         expect(columns).to.be.a('promise')
         return expect(columns).to.eventually.be.an('array')
-    })
-
-    it('user.status()', function() {
-        var status = user(uname).status()
-        expect(status).to.be.a('promise')
-        return expect(status).to.eventually.have.all.keys(['status', 'crawltime'])
     })
 
     it('#user._hash()', function() {

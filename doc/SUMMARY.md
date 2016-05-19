@@ -12,7 +12,6 @@
     + [user.collections](./user/collections.md)
     + [user.topics](./user/topics.md)
     + [user.columns](./user/columns.md)
-    + [user.status](./user/status.md)
 - [api.question](./question/README.md)
     + [question.answersByVote](./question/answersByVote.md)
     + [question.answersByPage](./question/answersByPage.md)

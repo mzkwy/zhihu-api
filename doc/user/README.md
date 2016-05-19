@@ -23,5 +23,4 @@ api.user({ uname: 'foobar' })
     + [collections([page])](./collections.md)
     + [topics([offset])](./topics.md)
     + [columns([offset])](./columns.md)
-    + [status()](./status.md)
 
