@@ -13,7 +13,7 @@ This is just an **UNOFFICIAL** project, aiming to provide basic data interface f
 ### Install
 
 ```
-npm install zhihu-api --save
+$ npm install zhihu-api --save
 ```
 
 ### Usage
