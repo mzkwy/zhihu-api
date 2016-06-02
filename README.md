@@ -9,7 +9,7 @@ See [doc](http://syaning.com/zhihu-api/index.html).
 ### Quick Start
 
 ```
-npm install zhihu-api --save
+$ npm install zhihu-api --save
 ```
 
 
