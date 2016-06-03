@@ -7,6 +7,13 @@ describe('urls', function() {
     expect(urls.index()).to.equal(baseurl)
   })
 
+  it('urls.full(path)', function() {
+    expect(urls.full('')).to.equal('')
+    expect(urls.full('/people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
+    expect(urls.full('people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
+    expect(urls.full('https://www.zhihu.com/people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
+  })
+
   describe('urls.user', function() {
     it('urls.user.home(uname)', function() {
       expect(urls.user.home('test')).to
