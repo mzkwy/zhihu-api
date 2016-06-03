@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 const urls = require('../lib/urls')
-const baseurl = urls._baseurl
+const baseurl = urls.baseurl
 
 describe('urls', function() {
   it('urls.index()', function() {
