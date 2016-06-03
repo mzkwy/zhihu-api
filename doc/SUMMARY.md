@@ -39,6 +39,7 @@
     + [Answer.exploreDay](./answer/exploreDay.md)
     + [Answer.exploreMonth](./answer/exploreMonth.md)
 - [Misc](./misc/README.md)
+    + [api.version](./misc/version.md)
     + [api.cookie](./misc/cookie.md)
     + [api._config](./misc/config.md)
     + [api._request](./misc/request.md)

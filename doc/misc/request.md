@@ -12,4 +12,4 @@ Send a `POST` request.
 
 ### request.xsrf()
 
-Get `xsrf`. If there already exists `xsrf` in `config.data`, then just resolve it, or a request will be sent.
+Get `xsrf`. If `config.xsrf` already exists, just resolve it, or a request will be sent.
