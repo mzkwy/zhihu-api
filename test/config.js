@@ -10,22 +10,25 @@ describe('config', function() {
       .which.is.a('string')
   })
 
-  it('config.data', function() {
-    expect(config.data).to.have.property('xsrf')
-      .which.is.a('string')
-  })
-
-  it('config.setCookie(cookie)', function() {
-    var cookie = 'this is my cookie'
-    expect(config.setCookie).to.be.a('function')
-    config.setCookie(cookie)
-    expect(config.headers.Cookie).to.equal(cookie)
-  })
-
-  it('config.setUserAgent(userAgent)', function() {
-    var userAgent = 'this is my user-agent'
-    expect(config.setUserAgent).to.be.a('function')
-    config.setUserAgent(userAgent)
+  it('config.userAgent', function() {
+    var userAgent = 'this is user agent'
+    expect(config.userAgent).to.equal(config.headers['User-Agent'])
+    config.userAgent = userAgent
     expect(config.headers['User-Agent']).to.equal(userAgent)
+  })
+
+  it('config.cookie', function() {
+    var cookie = 'this is cookie'
+    expect(config.cookie).to.equal(config.headers['Cookie'])
+    config.cookie = cookie
+    expect(config.headers['Cookie']).to.equal(cookie)
+  })
+
+  it('config.xsrf', function() {
+    var xsrf = 'this is xsrf'
+    config.xsrf = xsrf
+    expect(config.xsrf).to.equal(xsrf)
+    config.cookie = 'new cookie'
+    expect(config.xsrf).to.equal('')
   })
 })

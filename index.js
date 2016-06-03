@@ -8,9 +8,9 @@ const user = require('./lib/api/user')
 
 function cookie(_cookie) {
   if (_cookie) {
-    config.setCookie(_cookie)
+    config.cookie = _cookie
   } else {
-    return config.headers['Cookie']
+    return config.cookie
   }
 }
 
