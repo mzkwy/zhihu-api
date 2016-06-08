@@ -6,12 +6,13 @@ This projects implements only basic data interfaces, meaning that you should imp
 
 See [doc](http://syaning.com/zhihu-api/index.html).
 
+### Install
+
+```sh
+$ npm install zhihu-api
+```
+
 ### Quick Start
-
-```
-$ npm install zhihu-api --save
-```
-
 
 ```javascript
 const fs = require('fs')
@@ -59,4 +60,4 @@ which outputs:
 
 ### License
 
-MIT
+[MIT](./LICENSE)
