@@ -2,6 +2,7 @@ const config = require('./lib/config')
 const request = require('./lib/request')
 const action = require('./lib/api/action')
 const answer = require('./lib/api/answer')
+const org = require('./lib/api/org')
 const question = require('./lib/api/question')
 const topic = require('./lib/api/topic')
 const user = require('./lib/api/user')
@@ -28,6 +29,7 @@ module.exports = {
   version: package.version,
   action,
   answer,
+  org,
   question,
   topic,
   user
