@@ -1,6 +1,6 @@
 {
   "name": "zhihu-api",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {
@@ -40,5 +40,9 @@
     "eslint": "^2.4.0",
     "gitbook-cli": "^2.1.3",
     "mocha": "^2.4.5"
-  }
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ]
 }
