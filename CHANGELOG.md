@@ -1,0 +1,65 @@
+# 0.7.1 / 2016-06-29
+
+- Add detail information for collection activities and roundtable activities
+
+# 0.7.0 / 2016-06-10
+
+- Add detail infromation for `user.activities()`
+- Update docs
+
+# 0.6.0 / 2016-06-03
+
+- Code style: use 2-space indent
+- Fix bug: anonymous users' link should be empty string
+- Improve comments
+- Refactor `config`
+
+# 0.5.1 / 2016-05-19
+
+- Remove `user.status()`
+- Add user status to `user.detail()`
+
+# 0.5.0 / 2016-05-18
+
+- Add `answer.comments()`
+- Add `Answer.exploreDay()` and `Answer.exploreMonth()`
+- Update docs
+
+# 0.4.1 / 2016-05-13
+
+- Remove `user.latestActivity()`
+- Add `user.activities()`
+- Update docs
+
+# 0.4.0 / 2016-05-09
+
+- Add docs
+- Add `api.answer`
+- Change license from WTFPL to MIT
+- Other enhancement
+
+# 0.3.0 / 2016-05-03
+
+- Fix parser due to zhihu's page adjustment
+- Fix some bugs
+
+# 0.2.0 / 2016-05-03
+
+- Remove useless apis. Close #4
+
+# 0.1.0 / 2016-04-06
+
+- Add functions to `api.user`
+- Add functions to `api.question`
+- Add functions to `api.topic`
+- Add functions to `api.action`
+- Add test cases
+
+# 0.0.2 / 2016-03-11
+
+- Add `api.user`
+- Add `api.question`
+
+# 0.0.1 / 2016-03-11
+
+- Initial release
