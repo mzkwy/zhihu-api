@@ -31,6 +31,7 @@
   "homepage": "https://github.com/syaning/zhihu-api#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "cookie": "^0.3.1",
     "request": "^2.69.0"
   },
   "devDependencies": {
