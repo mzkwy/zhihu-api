@@ -2,93 +2,92 @@ const expect = require('chai').expect
 const assert = require('assert')
 const urls = require('../lib/urls')
 const baseurl = urls.baseurl
+const user = urls.user
 
-describe('urls', function() {
-  it('urls.index()', function() {
-    assert(url.index() === baseurl)
+describe('urls', () => {
+  it('.index()', () => {
+    assert(urls.index() === baseurl)
   })
 
-  it('urls.full(path)', function() {
-    expect(urls.full('')).to.equal('')
-    expect(urls.full('/people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
-    expect(urls.full('people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
-    expect(urls.full('https://www.zhihu.com/people/zhihuadmin')).to.equal(baseurl + '/people/zhihuadmin')
+  it('.full(path)', () => {
+    var link = `${baseurl}/people/test`
+    assert(urls.full('') === '')
+    assert(urls.full('/people/test') === link)
+    assert(urls.full('people/test') === link)
+    assert(urls.full(link) === link)
   })
 
-  describe('urls.user', function() {
-    it('urls.user.home(uname)', function() {
-      expect(urls.user.home('test')).to
-        .equal(baseurl + '/people/test')
+  describe('urls.user', () => {
+    it('.home(uname)', () => {
+      assert(user.home('test') === `${baseurl}/people/test`)
     })
 
-    it('urls.user.detail(uname)', function() {
-      expect(urls.user.detail('test')).to
-        .equal(baseurl + '/people/test/about')
+    it('.detail(uname)', () => {
+      assert(user.detail('test') === `${baseurl}/people/test/about`)
     })
 
-    it('urls.user.profile(uname)', function() {
-      expect(urls.user.profile('test')).to
-        .equal(baseurl + '/node/MemberProfileCardV2?params=%7B%22url_token%22%3A%22test%22%7D')
+    it('.profile(uname)', () => {
+      var link = `${baseurl}/node/MemberProfileCardV2?params=%7B%22url_token%22%3A%22test%22%7D`
+      assert(user.profile('test') === link)
     })
 
-    it('urls.user.followers()', function() {
-      expect(urls.user.followers()).to
-        .equal(baseurl + '/node/ProfileFollowersListV2')
+    it('.followers()', () => {
+      assert(user.followers() === `${baseurl}/node/ProfileFollowersListV2`)
     })
 
-    it('urls.user.followees()', function() {
-      expect(urls.user.followees()).to
-        .equal(baseurl + '/node/ProfileFolloweesListV2')
+    it('.followees()', () => {
+      assert(user.followees() === `${baseurl}/node/ProfileFolloweesListV2`)
     })
 
-    it('urls.user.questions(uname, page)', function() {
-      expect(urls.user.questions('test', 1)).to
-        .equal(baseurl + '/people/test/asks?page=1')
+    it('.questions(uname, page)', () => {
+      var link = `${baseurl}/people/test/asks?page=1`
+      assert(user.questions('test') === link)
+      assert(user.questions('test', 1) === link)
     })
 
-    it('urls.user.answers(uname, page)', function() {
-      expect(urls.user.answers('test', 1)).to
-        .equal(baseurl + '/people/test/answers?page=1')
+    it('.answers(uname, page)', () => {
+      var link = `${baseurl}/people/test/answers?page=1`
+      assert(user.answers('test') === link)
+      assert(user.answers('test', 1) === link)
     })
 
-    it('urls.user.posts(uname)', function() {
-      expect(urls.user.posts('test')).to
-        .equal(baseurl + '/people/test/posts?page=1')
+    it('.posts(uname)', () => {
+      var link = `${baseurl}/people/test/posts?page=1`
+      assert(user.posts('test') === link)
+      assert(user.posts('test', 1) === link)
     })
 
-    it('urls.user.collections(uname, page)', function() {
-      expect(urls.user.collections('test')).to
-        .equal(baseurl + '/people/test/collections?page=1')
+    it('.collections(uname, page)', () => {
+      var link = `${baseurl}/people/test/collections?page=1`
+      assert(user.collections('test') === link)
+      assert(user.collections('test', 1) === link)
     })
 
-    it('urls.user.topics(uname)', function() {
-      expect(urls.user.topics('test')).to
-        .equal(baseurl + '/people/test/topics')
+    it('.topics(uname)', () => {
+      assert(user.topics('test') === `${baseurl}/people/test/topics`)
     })
 
-    it('urls.user.columns()', function() {
-      expect(urls.user.columns()).to
-        .equal(baseurl + '/node/ProfileFollowedColumnsListV2')
+    it('.columns()', () => {
+      assert(user.columns() === `${baseurl}/node/ProfileFollowedColumnsListV2`)
     })
 
-    it('urls.user.activities(uname)', function() {
-      expect(urls.user.activities('test')).to
-        .equal(baseurl + '/people/test/activities')
+    it('.activities(uname)', () => {
+      assert(user.activities('test') === `${baseurl}/people/test/activities`)
     })
   })
 
-  describe('urls.question', function() {
-    it('urls.question.home(id)', function() {
+  describe('urls.question', () => {
+    it('urls.question.home(id)', () => {
       expect(urls.question.home(1234567)).to
         .equal(baseurl + '/question/1234567')
     })
 
-    it('urls.question.answersByVote()', function() {
+    it('urls.question.answersByVote()', () => {
       expect(urls.question.answersByVote()).to
         .equal(baseurl + '/node/QuestionAnswerListV2')
     })
 
-    it('urls.question.answersByPage(id, page)', function() {
+    it('urls.question.answersByPage(id, page)', () => {
       expect(urls.question.answersByPage(41325553)).to
         .equal(baseurl + '/question/41325553?sort=created&page=1')
 
@@ -96,19 +95,19 @@ describe('urls', function() {
         .equal(baseurl + '/question/41325553?sort=created&page=2')
     })
 
-    it('urls.question.followers(id)', function() {
+    it('urls.question.followers(id)', () => {
       expect(urls.question.followers(1234567)).to
         .equal(baseurl + '/question/1234567/followers')
     })
   })
 
-  describe('urls.answer', function() {
-    it('urls.answer.voters(aid)', function() {
+  describe('urls.answer', () => {
+    it('urls.answer.voters(aid)', () => {
       expect(urls.answer.voters(1234567)).to
         .equal(baseurl + '/answer/1234567/voters_profile')
     })
 
-    it('urls.answer.comments(aid, page)', function() {
+    it('urls.answer.comments(aid, page)', () => {
       expect(urls.answer.comments(1234567)).to
         .equal(baseurl + '/r/answers/1234567/comments?page=1')
 
@@ -116,7 +115,7 @@ describe('urls', function() {
         .equal(baseurl + '/r/answers/1234567/comments?page=2')
     })
 
-    it('urls.answer.explore(offset, type)', function() {
+    it('urls.answer.explore(offset, type)', () => {
       expect(urls.answer.explore(10, 'day')).to
         .equal(baseurl + '/node/ExploreAnswerListV2?params={"offset":10,"type":"day"}')
 
@@ -125,50 +124,50 @@ describe('urls', function() {
     })
   })
 
-  describe('urls.action', function() {
-    it('urls.action.follow()', function() {
+  describe('urls.action', () => {
+    it('urls.action.follow()', () => {
       expect(urls.action.follow()).to
         .equal(baseurl + '/node/MemberFollowBaseV2')
     })
 
-    it('urls.action.followTopic()', function() {
+    it('urls.action.followTopic()', () => {
       expect(urls.action.followTopic()).to
         .equal(baseurl + '/node/TopicFollowBaseV2')
     })
 
-    it('urls.action.followQuestion()', function() {
+    it('urls.action.followQuestion()', () => {
       expect(urls.action.followQuestion()).to
         .equal(baseurl + '/node/QuestionFollowBaseV2')
     })
 
-    it('urls.action.voteAnswer()', function() {
+    it('urls.action.voteAnswer()', () => {
       expect(urls.action.voteAnswer()).to
         .equal(baseurl + '/node/AnswerVoteBarV2')
     })
 
-    it('urls.action.sendMessage()', function() {
+    it('urls.action.sendMessage()', () => {
       expect(urls.action.sendMessage()).to
         .equal(baseurl + '/inbox/post')
     })
 
-    it('urls.action.block(uname)', function() {
+    it('urls.action.block(uname)', () => {
       expect(urls.action.block('test')).to
         .equal(baseurl + '/people/test/block')
     })
   })
 
-  describe('urls.topic', function() {
-    it('urls.topic.organize(id)', function() {
+  describe('urls.topic', () => {
+    it('urls.topic.organize(id)', () => {
       expect(urls.topic.organize(1234567)).to
         .equal(baseurl + '/topic/1234567/organize')
     })
 
-    it('urls.topic.followers(id)', function() {
+    it('urls.topic.followers(id)', () => {
       expect(urls.topic.followers(1234567)).to
         .equal(baseurl + '/topic/1234567/followers')
     })
 
-    it('urls.topic.topAnswers(id, page)', function() {
+    it('urls.topic.topAnswers(id, page)', () => {
       expect(urls.topic.topAnswers(1234567)).to
         .equal(baseurl + '/topic/1234567/top-answers?page=1')
 
@@ -176,17 +175,17 @@ describe('urls', function() {
         .equal(baseurl + '/topic/1234567/top-answers?page=2')
     })
 
-    it('urls.topic.hotAnswers(id)', function() {
+    it('urls.topic.hotAnswers(id)', () => {
       expect(urls.topic.hotAnswers(1234567)).to
         .equal(baseurl + '/topic/1234567/hot')
     })
 
-    it('urls.topic.newAnswers(id)', function() {
+    it('urls.topic.newAnswers(id)', () => {
       expect(urls.topic.newAnswers(1234567)).to
         .equal(baseurl + '/topic/1234567/newest')
     })
 
-    it('urls.topic.pendingQuestions(id)', function() {
+    it('urls.topic.pendingQuestions(id)', () => {
       expect(urls.topic.pendingQuestions(1234567)).to
         .equal(baseurl + '/topic/1234567/questions?page=1')
 
@@ -194,7 +193,7 @@ describe('urls', function() {
         .equal(baseurl + '/topic/1234567/questions?page=2')
     })
 
-    it('urls.topic.hotPendingQuestions(id)', function() {
+    it('urls.topic.hotPendingQuestions(id)', () => {
       expect(urls.topic.hotPendingQuestions(1234567)).to
         .equal(baseurl + '/topic/1234567/unanswered?page=1')
 
