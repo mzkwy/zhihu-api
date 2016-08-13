@@ -1,10 +1,11 @@
 const expect = require('chai').expect
+const assert = require('assert')
 const urls = require('../lib/urls')
 const baseurl = urls.baseurl
 
 describe('urls', function() {
   it('urls.index()', function() {
-    expect(urls.index()).to.equal(baseurl)
+    assert(url.index() === baseurl)
   })
 
   it('urls.full(path)', function() {
