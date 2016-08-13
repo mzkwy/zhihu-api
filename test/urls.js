@@ -1,8 +1,12 @@
-const expect = require('chai').expect
 const assert = require('assert')
 const urls = require('../lib/urls')
 const baseurl = urls.baseurl
 const user = urls.user
+const question = urls.question
+const answer = urls.answer
+const action = urls.action
+const topic = urls.topic
+const org = urls.org
 
 describe('urls', () => {
   it('.index()', () => {
@@ -77,128 +81,111 @@ describe('urls', () => {
   })
 
   describe('urls.question', () => {
-    it('urls.question.home(id)', () => {
-      expect(urls.question.home(1234567)).to
-        .equal(baseurl + '/question/1234567')
+    it('.home(id)', () => {
+      assert(question.home(1234567) === `${baseurl}/question/1234567`)
     })
 
-    it('urls.question.answersByVote()', () => {
-      expect(urls.question.answersByVote()).to
-        .equal(baseurl + '/node/QuestionAnswerListV2')
+    it('.answersByVote()', () => {
+      assert(question.answersByVote() === `${baseurl}/node/QuestionAnswerListV2`)
     })
 
-    it('urls.question.answersByPage(id, page)', () => {
-      expect(urls.question.answersByPage(41325553)).to
-        .equal(baseurl + '/question/41325553?sort=created&page=1')
-
-      expect(urls.question.answersByPage(41325553, 2)).to
-        .equal(baseurl + '/question/41325553?sort=created&page=2')
+    it('.answersByPage(id, page)', () => {
+      var link = `${baseurl}/question/1234567?sort=created&page=1`
+      assert(question.answersByPage(1234567) === link)
+      assert(question.answersByPage(1234567, 1) === link)
     })
 
-    it('urls.question.followers(id)', () => {
-      expect(urls.question.followers(1234567)).to
-        .equal(baseurl + '/question/1234567/followers')
+    it('.followers(id)', () => {
+      assert(question.followers(1234567) === `${baseurl}/question/1234567/followers`)
     })
   })
 
   describe('urls.answer', () => {
-    it('urls.answer.voters(aid)', () => {
-      expect(urls.answer.voters(1234567)).to
-        .equal(baseurl + '/answer/1234567/voters_profile')
+    it('.voters(aid)', () => {
+      assert(answer.voters(1234567) === `${baseurl}/answer/1234567/voters_profile`)
     })
 
-    it('urls.answer.comments(aid, page)', () => {
-      expect(urls.answer.comments(1234567)).to
-        .equal(baseurl + '/r/answers/1234567/comments?page=1')
-
-      expect(urls.answer.comments(1234567, 2)).to
-        .equal(baseurl + '/r/answers/1234567/comments?page=2')
+    it('.comments(aid, page)', () => {
+      var link = `${baseurl}/r/answers/1234567/comments?page=1`
+      assert(answer.comments(1234567) === link)
+      assert(answer.comments(1234567, 1) === link)
     })
 
-    it('urls.answer.explore(offset, type)', () => {
-      expect(urls.answer.explore(10, 'day')).to
-        .equal(baseurl + '/node/ExploreAnswerListV2?params={"offset":10,"type":"day"}')
-
-      expect(urls.answer.explore(10, 'month')).to
-        .equal(baseurl + '/node/ExploreAnswerListV2?params={"offset":10,"type":"month"}')
+    it('.explore(offset, type)', () => {
+      assert(answer.explore(10, 'day') === `${baseurl}/node/ExploreAnswerListV2?params={"offset":10,"type":"day"}`)
+      assert(answer.explore(10, 'month') === `${baseurl}/node/ExploreAnswerListV2?params={"offset":10,"type":"month"}`)
     })
   })
 
   describe('urls.action', () => {
-    it('urls.action.follow()', () => {
-      expect(urls.action.follow()).to
-        .equal(baseurl + '/node/MemberFollowBaseV2')
+    it('.follow()', () => {
+      assert(action.follow() === `${baseurl}/node/MemberFollowBaseV2`)
     })
 
-    it('urls.action.followTopic()', () => {
-      expect(urls.action.followTopic()).to
-        .equal(baseurl + '/node/TopicFollowBaseV2')
+    it('.followTopic()', () => {
+      assert(action.followTopic() === `${baseurl}/node/TopicFollowBaseV2`)
     })
 
-    it('urls.action.followQuestion()', () => {
-      expect(urls.action.followQuestion()).to
-        .equal(baseurl + '/node/QuestionFollowBaseV2')
+    it('.followQuestion()', () => {
+      assert(action.followQuestion() === `${baseurl}/node/QuestionFollowBaseV2`)
     })
 
-    it('urls.action.voteAnswer()', () => {
-      expect(urls.action.voteAnswer()).to
-        .equal(baseurl + '/node/AnswerVoteBarV2')
+    it('.voteAnswer()', () => {
+      assert(action.voteAnswer() === `${baseurl}/node/AnswerVoteBarV2`)
     })
 
-    it('urls.action.sendMessage()', () => {
-      expect(urls.action.sendMessage()).to
-        .equal(baseurl + '/inbox/post')
+    it('.sendMessage()', () => {
+      assert(action.sendMessage() === `${baseurl}/inbox/post`)
     })
 
-    it('urls.action.block(uname)', () => {
-      expect(urls.action.block('test')).to
-        .equal(baseurl + '/people/test/block')
+    it('.block(uname)', () => {
+      assert(action.block('test') === `${baseurl}/people/test/block`)
     })
   })
 
   describe('urls.topic', () => {
-    it('urls.topic.organize(id)', () => {
-      expect(urls.topic.organize(1234567)).to
-        .equal(baseurl + '/topic/1234567/organize')
+    it('.organize(id)', () => {
+      assert(topic.organize(1234567) === `${baseurl}/topic/1234567/organize`)
     })
 
-    it('urls.topic.followers(id)', () => {
-      expect(urls.topic.followers(1234567)).to
-        .equal(baseurl + '/topic/1234567/followers')
+    it('.followers(id)', () => {
+      assert(topic.followers(1234567) === `${baseurl}/topic/1234567/followers`)
     })
 
-    it('urls.topic.topAnswers(id, page)', () => {
-      expect(urls.topic.topAnswers(1234567)).to
-        .equal(baseurl + '/topic/1234567/top-answers?page=1')
-
-      expect(urls.topic.topAnswers(1234567, 2)).to
-        .equal(baseurl + '/topic/1234567/top-answers?page=2')
+    it('.topAnswers(id, page)', () => {
+      var link = `${baseurl}/topic/1234567/top-answers?page=1`
+      assert(topic.topAnswers(1234567) === link)
+      assert(topic.topAnswers(1234567, 1) === link)
     })
 
-    it('urls.topic.hotAnswers(id)', () => {
-      expect(urls.topic.hotAnswers(1234567)).to
-        .equal(baseurl + '/topic/1234567/hot')
+    it('.hotAnswers(id)', () => {
+      assert(topic.hotAnswers(1234567) === `${baseurl}/topic/1234567/hot`)
     })
 
-    it('urls.topic.newAnswers(id)', () => {
-      expect(urls.topic.newAnswers(1234567)).to
-        .equal(baseurl + '/topic/1234567/newest')
+    it('.newAnswers(id)', () => {
+      assert(topic.newAnswers(1234567) === `${baseurl}/topic/1234567/newest`)
     })
 
-    it('urls.topic.pendingQuestions(id)', () => {
-      expect(urls.topic.pendingQuestions(1234567)).to
-        .equal(baseurl + '/topic/1234567/questions?page=1')
-
-      expect(urls.topic.pendingQuestions(1234567, 2)).to
-        .equal(baseurl + '/topic/1234567/questions?page=2')
+    it('.pendingQuestions(id)', () => {
+      var link = `${baseurl}/topic/1234567/questions?page=1`
+      assert(topic.pendingQuestions(1234567) === link)
+      assert(topic.pendingQuestions(1234567, 1) === link)
     })
 
-    it('urls.topic.hotPendingQuestions(id)', () => {
-      expect(urls.topic.hotPendingQuestions(1234567)).to
-        .equal(baseurl + '/topic/1234567/unanswered?page=1')
+    it('.hotPendingQuestions(id)', () => {
+      var link = `${baseurl}/topic/1234567/unanswered?page=1`
+      assert(topic.hotPendingQuestions(1234567) === link)
+      assert(topic.hotPendingQuestions(1234567, 1) === link)
+    })
+  })
 
-      expect(urls.topic.hotPendingQuestions(1234567, 2)).to
-        .equal(baseurl + '/topic/1234567/unanswered?page=2')
+  describe('urls.org', () => {
+    it('.home(uname)', () => {
+      assert(org.home('test') === `${baseurl}/org/test`)
+    })
+
+    it('.detail(uname)', () => {
+      assert(org.detail('test') === `${baseurl}/org/test/about`)
     })
   })
 })

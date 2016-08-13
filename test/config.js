@@ -2,13 +2,13 @@ const assert = require('assert')
 const config = require('../lib/config')
 
 describe('config', () => {
-  it('config.headers', () => {
+  it('.headers', () => {
     assert(typeof config.headers['User-Agent'] === 'string')
     assert(typeof config.headers['Cookie'] === 'string')
     assert(typeof config.headers['Referer'] === 'string')
   })
 
-  it('config.userAgent', () => {
+  it('.userAgent', () => {
     var headers = config.headers
     var ua = 'customized user-agent'
 
@@ -17,7 +17,7 @@ describe('config', () => {
     assert(ua === headers['User-Agent'])
   })
 
-  it('config.cookie', () => {
+  it('.cookie', () => {
     var headers = config.headers
     var cookie = 'hello=world'
 
@@ -26,7 +26,7 @@ describe('config', () => {
     assert(cookie === headers['Cookie'])
   })
 
-  it('config.xsrf', () => {
+  it('.xsrf', () => {
     var xsrf = '1234567890'
     config.xsrf = xsrf
     assert(config.xsrf === xsrf)
