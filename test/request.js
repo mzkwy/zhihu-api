@@ -1,28 +1,34 @@
-const request = require('./global/api')._request
-const expect = require('./global/expect')
+const Request = require('../lib/request')
+const expect = require('chai').expect
 
-describe('request', function() {
+describe('Request', function() {
   this.timeout(15000)
+  var request = new Request()
 
-  it('request(url)', function() {
-    var req = request('https://httpbin.org/get?param=test')
-    expect(req).to.be.a('promise')
-    return expect(req).to.eventually.be.ok
+  it('#get', function() {
+    return request.get('https://httpbin.org/get')
+      .json()
+      .then(res => {
+        expect(res).to.be.an('object')
+      })
   })
 
-  it('request(url, data)', function() {
+  it('#post', function() {
     var data = {
       param: 'test'
     }
-    var req = request('https://httpbin.org/post', data)
-    expect(req).to.be.a('promise')
-    return expect(req).to.eventually.be.ok
+
+    return request.post('https://httpbin.org/post', data)
+      .json()
+      .then(res => {
+        expect(res).to.be.an('object')
+      })
   })
 
-  it('request.xsrf()', function() {
-    var xsrf = request.xsrf()
-    expect(xsrf).to.be.a('promise')
-    return expect(xsrf).to.eventually.be.a('string')
-      .which.has.lengthOf(32)
+  it('#xsrf', function() {
+    return request.xsrf()
+      .then(xsrf => {
+        expect(xsrf).to.be.a('string').which.has.lengthOf(32)
+      })
   })
 })
