@@ -1,6 +1,6 @@
-// const org = require('./lib/api/org')
 const Request = require('./lib/request')
 const User = require('./lib/api/user')
+const Org = require('./lib/api/org')
 const Topic = require('./lib/api/topic')
 const Question = require('./lib/api/question')
 const Answer = require('./lib/api/answer')
@@ -17,6 +17,7 @@ function cookie(val) {
 }
 
 User.prototype.__proto__ = _request
+Org.prototype.__proto__ = _request
 Topic.prototype.__proto__ = _request
 Question.prototype.__proto__ = _request
 Answer.prototype.__proto__ = _request
@@ -25,6 +26,7 @@ module.exports = {
   _request,
   cookie,
   user: User,
+  org: Org,
   topic: Topic,
   question: Question,
   answer: Answer,
