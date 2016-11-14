@@ -1,29 +1,33 @@
 // const action = require('./lib/api/action')
-// const answer = require('./lib/api/answer')
 // const org = require('./lib/api/org')
 const Request = require('./lib/request')
 const User = require('./lib/api/user')
 const Topic = require('./lib/api/topic')
 const Question = require('./lib/api/question')
+const Answer = require('./lib/api/answer')
 const package = require('./package')
 
-module.exports = API
+var _request = new Request()
 
-function API(cookie) {
-  if (!(this instanceof API)) {
-    return new API(cookie)
+function cookie(val) {
+  if (!arguments.length) {
+    return _request.headers['Cookie']
+  } else {
+    _request.setCookie(val)
   }
+}
 
-  var request = new Request()
-  request.setCookie(cookie)
+User.prototype.__proto__ = _request
+Topic.prototype.__proto__ = _request
+Question.prototype.__proto__ = _request
+Answer.prototype.__proto__ = _request
 
-  User.prototype.__proto__ = request
-  Topic.prototype.__proto__ = request
-  Question.prototype.__proto__ = request
-
-  this._request = request
-  this.user = User
-  this.topic = Topic
-  this.question = Question
-  this.version = package.version
+module.exports = {
+  _request,
+  cookie,
+  user: User,
+  topic: Topic,
+  question: Question,
+  answer: Answer,
+  version: package.version
 }
