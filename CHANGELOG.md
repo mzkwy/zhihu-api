@@ -1,3 +1,13 @@
+# 1.0.0 / 2016-11-15
+
+- Add `api.org`.
+- For user and organization, change property `uname` to `slug`.
+- Add `type` property to user and organization.
+- Remove `config.js`.
+- Update `request.js`.
+- Improve parser.
+- Other enhancements.
+
 # 0.7.1 / 2016-06-29
 
 - Add detail information for collection activities and roundtable activities
