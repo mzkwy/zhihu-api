@@ -31,7 +31,7 @@ which outputs:
 ```javascript
 {
     name: '知乎小管家',
-    uname: 'zhihuadmin',
+    slug: 'zhihuadmin',
     link: 'https://www.zhihu.com/people/zhihuadmin',
     biology: '欢迎反馈问题和建议！',
     weibo: 'http://weibo.com/zhihuadmin',
