@@ -1,15 +1,25 @@
 # api._request
 
-`api._request` is a reference to internal module `request`. `config.headers` will be used for all requests.
+### get(url[, params])
 
-### request(url)
+Send a `GET` HTTP request.
 
-Send a `GET` request.
+### post(url, data)
 
-### request(url, data)
+Send a `POST` HTTP request.
 
-Send a `POST` request.
+### request(opts)
 
-### request.xsrf()
+Send a HTTP request.
 
-Get `xsrf`. If `config.xsrf` already exists, just resolve it, or a request will be sent.
+### xsrf()
+
+Get `_xsrf`.
+
+### setCookie(cookie)
+
+Set cookies.
+
+### headers
+
+HTTP request headers.

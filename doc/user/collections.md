@@ -9,7 +9,8 @@ Get this user's collections. By default, `page` is `1`.
 For example:
 
 ```javascript
-api.user('renfish').collections()
+api.user('renfish')
+    .collections()
     .then(console.log)
     .catch(console.trace)
 ```

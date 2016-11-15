@@ -9,7 +9,8 @@ Get pending questions (or 等待回答 - 全部问题) under this topic.
 For example:
 
 ```javascript
-api.topic(19550429).pendingQuestions()
+api.topic(19550429)
+    .pendingQuestions()
     .then(console.log)
     .catch(console.trace)
 ```

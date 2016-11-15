@@ -9,7 +9,8 @@ Get users that followed this question.
 For example:
 
 ```javascript
-api.question(20395761).followers()
+api.question(20395761)
+    .followers()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -19,13 +20,15 @@ the reuslt is:
 ```javascript
 [{
     name: '黄小君',
-    uname: 'huang-xiao-jun-90',
+    slug: 'huang-xiao-jun-90',
+    type: 'people',
     link: 'https://www.zhihu.com/people/huang-xiao-jun-90',
     hash: '51ddb1402cf02b8fcda1fa6109b4f0f1',
     avatar: 'https://pic4.zhimg.com/d1f3fa4b3_m.jpg'
 }, {
     name: 'Sophie呀',
-    uname: 'lian-jie-32',
+    slug: 'lian-jie-32',
+    type: 'people',
     link: 'https://www.zhihu.com/people/lian-jie-32',
     hash: '97d63291c7fbac346d2864bc953979c7',
     avatar: 'https://pic3.zhimg.com/5735a731dcc4fa0f90f6679765447392_m.jpg'

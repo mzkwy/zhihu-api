@@ -1,7 +1,7 @@
-# user.detail
+# user/org.detail
 
 ```javascript
-user.detail()
+user/org.detail()
 ```
 
 Return detail information about this user.
@@ -9,7 +9,8 @@ Return detail information about this user.
 For example:
 
 ```javascript
-api.user('zhihuadmin').detail()
+api.user('zhihuadmin')
+    .detail()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -19,7 +20,8 @@ the result is:
 ```javascript
 {
     name: '知乎小管家',
-    uname: 'zhihuadmin',
+    slug: 'zhihuadmin',
+    type: 'people',
     link: 'https://www.zhihu.com/people/zhihuadmin',
     biology: '欢迎反馈问题和建议！',
     weibo: 'http://weibo.com/zhihuadmin',

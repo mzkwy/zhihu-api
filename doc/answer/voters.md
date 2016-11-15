@@ -10,7 +10,8 @@ For example:
 
 ```javascript
 // https://www.zhihu.com/question/20395761/answer/44292338
-api.answer(13111581).voters()
+api.answer(13111581)
+    .voters()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -21,13 +22,15 @@ the result is:
 {
     voters: [{
         name: '梁边妖',
-        uname: 'liangbianyao',
+        slug: 'liangbianyao',
+        type: 'people',
         link: 'https://www.zhihu.com/people/liangbianyao',
         hash: '48ddfa526720c3ada296462afb5d564b',
         avatar: 'https://pic3.zhimg.com/e890b7eba_m.jpg'
     }, {
         name: '王有刚',
-        uname: 'wang-you-gang',
+        slug: 'wang-you-gang',
+        type: 'people',
         link: 'https://www.zhihu.com/people/wang-you-gang',
         hash: '0bf89713587eaadbbff1a56ef3aa85cb',
         avatar: 'https://pic3.zhimg.com/a5ff25e86_m.jpg'

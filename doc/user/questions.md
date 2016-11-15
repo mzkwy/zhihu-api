@@ -1,7 +1,7 @@
-# user.questions
+# user/org.questions
 
 ```javascript
-user.questions([page])
+user/org.questions([page])
 ```
 
 Get questions that this user asked. By default, `page` is `1`.
@@ -9,7 +9,8 @@ Get questions that this user asked. By default, `page` is `1`.
 For example:
 
 ```javascript
-api.user('zhihuadmin').questions()
+api.user('zhihuadmin')
+    .questions()
     .then(console.log)
     .catch(console.trace)
 ```

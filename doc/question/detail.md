@@ -9,7 +9,8 @@ Get detail information of this question.
 For example:
 
 ```javascript
-api.question(20395761).detail()
+api.question(20395761)
+    .detail()
     .then(console.log)
     .catch(console.trace)
 ```

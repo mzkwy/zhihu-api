@@ -9,7 +9,8 @@ Get hot pending questions (or 等待回答 - 热门问题) under this topic.
 For example:
 
 ```javascript
-api.topic(19550429).hotPendingQuestions()
+api.topic(19550429)
+    .hotPendingQuestions()
     .then(console.log)
     .catch(console.trace)
 ```

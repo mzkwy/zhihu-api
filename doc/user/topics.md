@@ -1,7 +1,7 @@
-# user.topics
+# user/org.topics
 
 ```javascript
-user.topics([offset])
+user/org.topics([offset])
 ```
 
 Get topics that this user followed.
@@ -9,7 +9,8 @@ Get topics that this user followed.
 For example:
 
 ```javascript
-api.user('zhihuadmin').topics()
+api.user('zhihuadmin')
+    .topics()
     .then(console.log)
     .catch(console.trace)
 ```

@@ -28,7 +28,8 @@ const api = require('zhihu-api')
 
 api.cookie(fs.readFileSync('./cookie'))
 
-api.user('zhihuadmin').detail()
+api.user('zhihuadmin')
+    .detail()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -38,7 +39,7 @@ the result is:
 ```javascript
 {
     name: '知乎小管家',
-    uname: 'zhihuadmin',
+    slug: 'zhihuadmin',
     link: 'https://www.zhihu.com/people/zhihuadmin',
     biology: '欢迎反馈问题和建议！',
     weibo: 'http://weibo.com/zhihuadmin',

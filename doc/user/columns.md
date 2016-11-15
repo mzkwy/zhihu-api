@@ -1,7 +1,7 @@
-# user.columns
+# user/org.columns
 
 ```javascript
-user.columns([offset])
+user/org.columns([offset])
 ```
 
 Get columns that this user followed.
@@ -9,7 +9,8 @@ Get columns that this user followed.
 For example:
 
 ```javascript
-api.user('zhihuadmin').columns()
+api.user('zhihuadmin')
+    .columns()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -19,14 +20,14 @@ the result is:
 ```javascript
 [{
     link: 'http://zhuanlan.zhihu.com/anitama',
-    uname: 'anitama',
+    slug: 'anitama',
     avatar: 'https://pic2.zhimg.com/622cab01d742889d39249c04d90828a9_l.png',
     name: 'AnimeTamashii',
     description: '讲道理的动漫媒体。官方微博：@AnimeTamashii 官方网站：http://www.anitama.cn',
     posts: 655
 }, {
     link: 'http://zhuanlan.zhihu.com/dechuanmimi',
-    uname: 'dechuanmimi',
+    slug: 'dechuanmimi',
     avatar: 'https://pic2.zhimg.com/4af13539da75ef276cb0c7b2e652afb9_l.jpg',
     name: '比新闻更美',
     description: '在这里，分享的是我一路所见，比新闻更美的人与事。因为，美比好，更加好。',

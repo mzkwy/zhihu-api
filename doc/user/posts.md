@@ -1,7 +1,7 @@
-# user.posts
+# user/org.posts
 
 ```javascript
-user.posts([page])
+user/org.posts([page])
 ```
 
 Get this user's posts. By default, `page` is `1`.
@@ -9,7 +9,8 @@ Get this user's posts. By default, `page` is `1`.
 For example:
 
 ```javascript
-api.user('zhihuadmin').posts()
+api.user('zhihuadmin')
+    .posts()
     .then(console.log)
     .catch(console.trace)
 ```

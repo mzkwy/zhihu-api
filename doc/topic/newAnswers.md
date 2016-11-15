@@ -9,7 +9,8 @@ Get new answers (or 动态 - 时间排序) under this topic. The parameter `offs
 For example:
 
 ```javascript
-api.topic(19550429).newAnswers()
+api.topic(19550429)
+    .newAnswers()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -26,7 +27,8 @@ the result is:
     content: '一<br>电视剧则是中国的特有的说法，在其他国家，电视剧被成为电视小说，电视故事片，电视戏剧等等。但是不管称呼怎么变，很显然，电视剧首先是属于戏剧范畴的一种演剧形式。<br><br>既然是戏剧的变种，那么评价一部电视剧最基本的就应该从戏剧的几个基本要素出发去看。<br><br>亚里士多德很早的时候就将悲剧概括为”<b>对一个严肃、完整、有一定长度的行动的摹仿。”</b><br><br><br> ... ...',
     author: {
         name: '由葭',
-        uname: 'you-jia-71-36',
+        slug: 'you-jia-71-36',
+        type: 'people',
         link: 'https://www.zhihu.com/people/you-jia-71-36'
     },
     question: {

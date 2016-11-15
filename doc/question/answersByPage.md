@@ -9,7 +9,8 @@ Get answers by page (or time that the answer created and updated in reverse orde
 For example:
 
 ```javascript
-api.question(20395761).answersByPage()
+api.question(20395761)
+    .answersByPage()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -24,7 +25,8 @@ the result is:
     agrees: 0,
     author: {
         name: '沐烟',
-        uname: 'jin-yan-chuang',
+        slug: 'jin-yan-chuang',
+        type: 'people',
         link: 'https://www.zhihu.com/people/jin-yan-chuang'
     },
     resourceid: 338640,

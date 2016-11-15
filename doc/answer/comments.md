@@ -10,7 +10,8 @@ For example:
 
 ```javascript
 // https://www.zhihu.com/question/20395761/answer/44292338
-api.answer(13111581).comments()
+api.answer(13111581)
+    .comments()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -25,7 +26,8 @@ the result is:
         link: "https://www.zhihu.com/r/answers/13111581/comments/74104760",
         author: {
             name: "窗外",
-            uname: "liu-tao-86-67-74",
+            slug: "liu-tao-86-67-74",
+            type: 'people',
             link: "http://www.zhihu.com/people/liu-tao-86-67-74",
             avatar: "https://pic4.zhimg.com/1689ccecb01f18230385d1cd2dcc5077_l.jpg",
             meta: {
@@ -43,7 +45,8 @@ the result is:
         link: "https://www.zhihu.com/r/answers/13111581/comments/74109997",
         author: {
             name: "不靠谱小姐",
-            uname: "si-si-52-44",
+            slug: "si-si-52-44",
+            type: 'people',
             link: "http://www.zhihu.com/people/si-si-52-44",
             avatar: "https://pic2.zhimg.com/c00b89164df1b053d15242068e57f4f1_l.jpg",
             meta: {

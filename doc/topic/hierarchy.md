@@ -9,7 +9,8 @@ Get the hierarchy information of given topic.
 For example:
 
 ```javascript
-api.topic(19550429).hierarchy()
+api.topic(19550429)
+    .hierarchy()
     .then(console.log)
     .catch(console.trace)
 ```

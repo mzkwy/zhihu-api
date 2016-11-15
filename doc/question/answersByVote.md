@@ -9,7 +9,8 @@ Get answers by vote. However, it doesn't means answers are sorted by vote count,
 For example:
 
 ```javascript
-api.question(20395761).answersByVote()
+api.question(20395761)
+    .answersByVote()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -24,7 +25,8 @@ the result is:
     agrees: 10257,
     author: {
         name: '磐僧',
-        uname: 'pan-seng',
+        slug: 'pan-seng',
+        type: 'people',
         link: 'https://www.zhihu.com/people/pan-seng'
     },
     resourceid: 338640,

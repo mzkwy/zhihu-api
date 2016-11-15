@@ -1,7 +1,7 @@
-# user.activities
+# user/org.activities
 
 ```javascript
-user.activities([start])
+user/org.activities([start])
 ```
 
 Get user's activities. The parameter `start` is a timestamp in seconds.
@@ -9,7 +9,8 @@ Get user's activities. The parameter `start` is a timestamp in seconds.
 For example:
 
 ```javascript
-api.user('zhihuadmin').activities()
+api.user('zhihuadmin')
+    .activities()
     .then(console.log)
     .catch(console.trace)
 ```
@@ -44,7 +45,8 @@ the result is:
         content: '',
         author: {
             name: '知乎小管家',
-            uname: 'zhihuadmin',
+            slug: 'zhihuadmin',
+            type: 'people',
             link: 'https://www.zhihu.com/people/zhihuadmin'
         },
         question: {
