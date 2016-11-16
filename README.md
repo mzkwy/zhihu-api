@@ -1,7 +1,8 @@
 # zhihu API
 
-[![node](https://img.shields.io/node/v/zhihu-api.svg)](https://www.npmjs.com/package/zhihu-api)
+[![node](https://img.shields.io/node/v/zhihu-api.svg)](https://nodejs.org/en/)
 [![npm](https://img.shields.io/npm/dt/zhihu-api.svg)](https://www.npmjs.com/package/zhihu-api)
+[![Travis](https://img.shields.io/travis/syaning/zhihu-api.svg)](https://travis-ci.org/syaning/zhihu-api)
 
 **UNOFFICIAL** API for [zhihu](https://www.zhihu.com).
 
