@@ -1,5 +1,8 @@
 # zhihu API
 
+[![node](https://img.shields.io/node/v/zhihu-api.svg)](https://www.npmjs.com/package/zhihu-api)
+[![npm](https://img.shields.io/npm/dt/zhihu-api.svg)](https://www.npmjs.com/package/zhihu-api)
+
 **UNOFFICIAL** API for [zhihu](https://www.zhihu.com).
 
 This projects implements only basic data interfaces, meaning that you should implement your own logical code (by using this project) if you want a crawler/spider.
@@ -21,7 +24,8 @@ const api = require('zhihu-api')
 // cookie must be set before any request
 api.cookie(fs.readFileSync('./cookie'))
 
-api.user('zhihuadmin').detail()
+api.user('zhihuadmin')
+    .detail()
     .then(console.log)
     .catch(console.trace)
 ```

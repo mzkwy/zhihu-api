@@ -45,5 +45,8 @@
   "files": [
     "lib/",
     "index.js"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0"
+  }
 }
