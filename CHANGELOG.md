@@ -9,6 +9,7 @@
 - Add `type` property to user and organization.
 - Remove `config.js`.
 - Update `request.js`.
+- Remove `api.action`.
 - Improve parser.
 - Other enhancements.
 
