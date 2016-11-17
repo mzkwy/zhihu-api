@@ -1,4 +1,4 @@
-# api.user
+# api.user / api.org
 
 `api.user` is the constructor of `User` class, `api.org` is the constructor of `Org` class.
 
