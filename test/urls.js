@@ -1,12 +1,13 @@
+/* eslint-env mocha */
 const urls = require('../lib/urls')
 const expect = require('chai').expect
 
-describe('urls', function() {
-  it('#baseurl', function() {
+describe('urls', function () {
+  it('#baseurl', function () {
     expect(urls.baseurl).to.be.a('string')
   })
 
-  it('#full', function() {
+  it('#full', function () {
     var link = `${urls.baseurl}/people/test`
 
     expect(urls.full('')).to.equal('')

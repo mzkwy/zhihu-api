@@ -4,7 +4,7 @@
   "description": "Unofficial API for zhihu (https://www.zhihu.com)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js",
+    "test": "standard && mocha test/**/*.js",
     "doc:clean": "rm -rf doc/_book",
     "doc:build": "npm run doc:clean && cd doc && gitbook build",
     "doc:publish": "npm run doc:build && cd doc/_book && git init && git commit --allow-empty -m \"Update doc\" && git checkout -b gh-pages && git add . && git commit -am \"Update docs\" && git push https://github.com/syaning/zhihu-api.git gh-pages --force"
@@ -40,7 +40,8 @@
     "chai": "^3.5.0",
     "gitbook-cli": "^2.3.0",
     "gitbook-plugin-highlight": "^2.0.2",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "standard": "^8.5.0"
   },
   "files": [
     "lib/",
