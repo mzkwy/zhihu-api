@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 const expect = require('chai').expect
 const cheerio = require('cheerio')
 const util = require('../lib/parser/util')
@@ -9,29 +10,29 @@ var $ = cheerio.load(domstr, {
 })
 var ele = $('div')
 
-describe('parser util', function() {
-  it('#getAttr', function() {
+describe('parser util', function () {
+  it('#getAttr', function () {
     expect(util.getAttr(ele, 'id')).to.equal('example')
     expect(util.getAttr(ele, 'class')).to.equal('container')
   })
 
-  it('#getText', function() {
+  it('#getText', function () {
     expect(util.getText(ele)).to.equal('hello 世界')
   })
 
-  it('#getData', function() {
+  it('#getData', function () {
     expect(util.getData(ele, 'name')).to.equal('test')
     expect(util.getData(ele, 'id')).to.equal(123456)
     expect(util.getData(ele, 'count')).to.equal(0)
     expect(util.getData(ele, 'none')).to.equal('')
   })
 
-  it('#getHtml', function() {
+  it('#getHtml', function () {
     expect(util.getHtml($)).to.equal(domstr)
     expect(util.getHtml(ele)).to.equal('hello 世界')
   })
 
-  it('#toNum', function() {
+  it('#toNum', function () {
     expect(util.toNum(null)).to.equal(0)
     expect(util.toNum(undefined)).to.equal(0)
     expect(util.toNum([])).to.equal(0)
@@ -41,20 +42,20 @@ describe('parser util', function() {
     expect(util.toNum('12345')).to.equal(12345)
   })
 
-  it('#forEach', function() {
+  it('#forEach', function () {
     var arr = [1, 2, 3]
     var res = []
     util.forEach(arr, x => res.push(x * x))
     expect(res).to.eql([1, 4, 9])
   })
 
-  it('#map', function() {
+  it('#map', function () {
     var arr = [1, 2, 3]
     var res = util.map(arr, x => x * x)
     expect(res).to.eql([1, 4, 9])
   })
 
-  it('parseSlug', function() {
+  it('parseSlug', function () {
     var ret = util.parseSlug('/people/test')
     expect(ret.type).to.equal('people')
     expect(ret.slug).to.equal('test')

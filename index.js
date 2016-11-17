@@ -4,11 +4,10 @@ const Org = require('./lib/api/org')
 const Topic = require('./lib/api/topic')
 const Question = require('./lib/api/question')
 const Answer = require('./lib/api/answer')
-const package = require('./package')
 
 var _request = new Request()
 
-function cookie(val) {
+function cookie (val) {
   if (!arguments.length) {
     return _request.headers['Cookie']
   } else {
@@ -16,19 +15,28 @@ function cookie(val) {
   }
 }
 
-User.prototype.__proto__ = _request
-Org.prototype.__proto__ = _request
-Topic.prototype.__proto__ = _request
-Question.prototype.__proto__ = _request
-Answer.prototype.__proto__ = _request
+function proxy (val) {
+  if (!arguments.length) {
+    return _request.proxy
+  } else {
+    _request.setProxy(val)
+  }
+}
+
+Object.setPrototypeOf(User.prototype, _request)
+Object.setPrototypeOf(Org.prototype, _request)
+Object.setPrototypeOf(Topic.prototype, _request)
+Object.setPrototypeOf(Question.prototype, _request)
+Object.setPrototypeOf(Answer.prototype, _request)
 
 module.exports = {
   _request,
   cookie,
+  proxy,
   user: User,
   org: Org,
   topic: Topic,
   question: Question,
   answer: Answer,
-  version: package.version
+  version: require('./package').version
 }
