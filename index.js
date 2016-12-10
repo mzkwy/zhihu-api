@@ -1,5 +1,5 @@
 const Request = require('./lib/request')
-const User = require('./lib/api/user')
+const user = require('./lib/api/user')
 const Org = require('./lib/api/org')
 const Topic = require('./lib/api/topic')
 const Question = require('./lib/api/question')
@@ -7,7 +7,7 @@ const Answer = require('./lib/api/answer')
 
 var _request = new Request()
 
-function cookie (val) {
+function cookie(val) {
   if (!arguments.length) {
     return _request.headers['Cookie']
   } else {
@@ -15,7 +15,7 @@ function cookie (val) {
   }
 }
 
-function proxy (val) {
+function proxy(val) {
   if (!arguments.length) {
     return _request.proxy
   } else {
@@ -23,7 +23,6 @@ function proxy (val) {
   }
 }
 
-Object.setPrototypeOf(User.prototype, _request)
 Object.setPrototypeOf(Org.prototype, _request)
 Object.setPrototypeOf(Topic.prototype, _request)
 Object.setPrototypeOf(Question.prototype, _request)
@@ -33,7 +32,7 @@ module.exports = {
   _request,
   cookie,
   proxy,
-  user: User,
+  user: user(_request),
   org: Org,
   topic: Topic,
   question: Question,
