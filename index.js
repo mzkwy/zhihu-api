@@ -1,6 +1,5 @@
 const Request = require('./lib/request')
 const user = require('./lib/api/user')
-const org = require('./lib/api/org')
 const topic = require('./lib/api/topic')
 const question = require('./lib/api/question')
 const answer = require('./lib/api/answer')
@@ -26,7 +25,6 @@ module.exports = function() {
     },
 
     user: user(_request),
-    org: org(_request),
     topic: topic(_request),
     question: question(_request),
     answer: answer(_request),
