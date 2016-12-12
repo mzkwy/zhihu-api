@@ -4,3 +4,5 @@
 
 - Image(src)
   + download(opts)
+- Image.dir
+- Image.size
