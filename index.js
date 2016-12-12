@@ -25,6 +25,8 @@ module.exports = function() {
       }
     },
 
+    _request,
+
     user: user(_request),
     topic: topic(_request),
     question: question(_request),

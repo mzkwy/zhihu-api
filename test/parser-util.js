@@ -57,18 +57,14 @@ describe('parser util', function () {
 
   it('parseSlug', function () {
     var ret = util.parseSlug('/people/test')
-    expect(ret.type).to.equal('people')
-    expect(ret.slug).to.equal('test')
-    expect(ret.link).to.equal(`${urls.baseurl}/people/test`)
+    expect(ret.user_type).to.equal('people')
+    expect(ret.url_token).to.equal('test')
 
     ret = util.parseSlug('/org/test')
-    expect(ret.type).to.equal('org')
-    expect(ret.slug).to.equal('test')
-    expect(ret.link).to.equal(`${urls.baseurl}/org/test`)
+    expect(ret.user_type).to.equal('organization')
+    expect(ret.url_token).to.equal('test')
 
     ret = util.parseSlug('')
-    expect(ret.type).to.equal('anonymous')
-    expect(ret.slug).to.equal('')
-    expect(ret.link).to.equal('')
+    expect(ret.name).to.equal('匿名用户')
   })
 })
