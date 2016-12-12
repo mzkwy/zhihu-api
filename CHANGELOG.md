@@ -1,4 +1,4 @@
-# 2.0.0
+# 2.0.0 / 2016-12-12
 
 - Changed user API to support new homepage.
 - Support multiple sessions.
