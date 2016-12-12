@@ -4,6 +4,7 @@
 - Support multiple sessions.
 - Request with authorization headers.
 - Unify property names with official version.
+- Image downloader.
 
 # 1.0.1 / 2016-11-16
 

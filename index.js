@@ -3,6 +3,7 @@ const user = require('./lib/api/user')
 const topic = require('./lib/api/topic')
 const question = require('./lib/api/question')
 const answer = require('./lib/api/answer')
+const image = require('./lib/api/image')
 
 module.exports = function() {
   var _request = new Request()
@@ -28,6 +29,7 @@ module.exports = function() {
     topic: topic(_request),
     question: question(_request),
     answer: answer(_request),
+    image: image(_request),
 
     version: require('./package').version
   }
