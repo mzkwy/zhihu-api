@@ -1,3 +1,10 @@
+# 2.0.0
+
+- Changed user API to support new homepage.
+- Support multiple sessions.
+- Request with authorization headers.
+- Unify property names with official version.
+
 # 1.0.1 / 2016-11-16
 
 - Add Travis-CI.
