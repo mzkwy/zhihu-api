@@ -99,7 +99,6 @@ which outputs:
         }
     }]
 }
-
 ```
 
 ### License
