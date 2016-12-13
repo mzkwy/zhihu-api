@@ -3,36 +3,36 @@ const user = require('./lib/api/user')
 const topic = require('./lib/api/topic')
 const question = require('./lib/api/question')
 const answer = require('./lib/api/answer')
+const collection = require('./lib/api/collection')
 const image = require('./lib/api/image')
 
 module.exports = function() {
-  var _request = new Request()
-
+  var req = new Request()
   var api = {
     cookie(val) {
       if (!arguments.length) {
-        return _request.headers['Cookie']
+        return req.headers['Cookie']
       } else {
-        _request.setCookie(val)
+        req.setCookie(val)
       }
     },
 
     proxy(val) {
       if (!arguments.length) {
-        return _request.proxy
+        return req.proxy
       } else {
-        _request.setProxy(val)
+        req.setProxy(val)
       }
     },
 
-    _request,
+    user: user(req),
+    topic: topic(req),
+    question: question(req),
+    answer: answer(req),
+    collection: collection(req),
+    image: image(req),
 
-    user: user(_request),
-    topic: topic(_request),
-    question: question(_request),
-    answer: answer(_request),
-    image: image(_request),
-
+    _request: req,
     version: require('./package').version
   }
 
