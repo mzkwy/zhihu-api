@@ -6,3 +6,4 @@
   + download(opts)
 - Image.dir
 - Image.size
+- Image.from(str)
