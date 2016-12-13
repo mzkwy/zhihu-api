@@ -1,3 +1,8 @@
+# 2.1.0 / 2016-12-13
+
+- Add collection API.
+- Add `Image.from` method.
+
 # 2.0.0 / 2016-12-12
 
 - Changed user API to support new homepage.
