@@ -1,4 +1,7 @@
+# 2.1.1 / 2016-12-14
+
 - `mkdir -p` if directory not exists when downloading images.
+- Improve request module.
 
 # 2.1.0 / 2016-12-13
 
