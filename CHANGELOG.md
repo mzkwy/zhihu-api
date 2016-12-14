@@ -1,3 +1,5 @@
+- `mkdir -p` if directory not exists when downloading images.
+
 # 2.1.0 / 2016-12-13
 
 - Add collection API.
