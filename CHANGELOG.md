@@ -1,3 +1,7 @@
+# 2.2.0 / 2016-12-14
+
+- Add `api.action`: follow/unfollow users, send messages, vote answers.
+
 # 2.1.1 / 2016-12-14
 
 - `mkdir -p` if directory not exists when downloading images.

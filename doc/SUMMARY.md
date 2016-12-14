@@ -7,3 +7,4 @@
 - [api.answer](./api/answer.md)
 - [api.collection](./api/collection.md)
 - [api.image](./api/image.md)
+- [api.action](./api/action.md)

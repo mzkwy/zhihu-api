@@ -5,6 +5,7 @@ const question = require('./lib/api/question')
 const answer = require('./lib/api/answer')
 const collection = require('./lib/api/collection')
 const image = require('./lib/api/image')
+const action = require('./lib/api/action')
 
 module.exports = function() {
   var req = new Request()
@@ -31,6 +32,7 @@ module.exports = function() {
     answer: answer(req),
     collection: collection(req),
     image: image(req),
+    action: action(req),
 
     _request: req,
     version: require('./package').version
